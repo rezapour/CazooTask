@@ -1,7 +1,8 @@
-package com.rezapour.cazootask
+package com.rezapour.cazootask.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.rezapour.cazootask.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
