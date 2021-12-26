@@ -56,7 +56,6 @@ class MainRepositoryImplTest {
 
         runBlocking {
             repository.getCarList().test {
-                assertThat(awaitItem()).isInstanceOf(DataState.Loading::class.java)
                 assertThat(awaitItem()).isInstanceOf(DataState.Success::class.java)
                 awaitComplete()
             }
@@ -72,7 +71,6 @@ class MainRepositoryImplTest {
 
         runBlocking {
             repository.getCarList().test {
-                assertThat(awaitItem()).isInstanceOf(DataState.Loading::class.java)
                 assertThat(awaitItem()).isInstanceOf(DataState.Error::class.java)
                 awaitComplete()
             }
