@@ -1,0 +1,1722 @@
+{
+  "results": [
+    {
+      "createdAt": "2021-12-24T16:06:32.453Z",
+      "id": "147df090-324b-11ec-9618-fd6f3cdee11c",
+      "make": "Honda",
+      "model": "CR-V",
+      "modelYear": 2017,
+      "displayVariant": "2L SE h i-MMD",
+      "mileage": 7420,
+      "registrationYear": 2020,
+      "vrm": "OV70PYY",
+      "isForSubscription": false,
+      "isForPurchase": true,
+      "fuelType": {
+        "description": "Hybrid",
+        "isEcoFriendly": true,
+        "isPlugin": false
+      },
+      "images": {
+        "main": {
+          "url": "https://res.cloudinary.com/cazoo/image/upload/c_scale,f_auto,h_405,q_auto,w_720/cazoo-imagery/car_gallery_images/JHMRT5840LX204858/NCVGjsXcDtqbGicnVOnO.JPG"
+        }
+      },
+      "isPromoted": false,
+      "odometerReading": {
+        "unit": "mile",
+        "value": 7420
+      },
+      "tradingMarket": "gb",
+      "vehicleType": "Car",
+      "pricing": {
+        "fullPrice": {
+          "centAmount": 3040000,
+          "currencyCode": "GBP",
+          "value": 30400
+        },
+        "pcmPrice": {
+          "pcp": {
+            "centAmount": 52992,
+            "currencyCode": "GBP",
+            "value": 530
+          },
+          "hp": {
+            "centAmount": 72545,
+            "currencyCode": "GBP",
+            "value": 725
+          },
+          "lowest": {
+            "centAmount": 52992,
+            "currencyCode": "GBP",
+            "value": 530,
+            "type": "pcp"
+          }
+        }
+      }
+    },
+    {
+      "createdAt": "2021-12-24T15:33:43.713Z",
+      "id": "adce47da-1a2a-5c5c-aefd-993e82f6d427",
+      "make": "Volkswagen",
+      "model": "CC",
+      "modelYear": 2016,
+      "displayVariant": "2L GT BlueMotion Tech TDI",
+      "mileage": 37326,
+      "registrationYear": 2016,
+      "vrm": "FP16MKD",
+      "isForSubscription": false,
+      "isForPurchase": true,
+      "fuelType": {
+        "description": "Diesel",
+        "isEcoFriendly": false,
+        "isPlugin": false
+      },
+      "images": {
+        "main": {
+          "url": "https://res.cloudinary.com/cazoo/image/upload/c_scale,f_auto,h_405,q_auto,w_720/cazoo-imagery/car_gallery_images/WVWZZZ3CZGE513859/mSW6QmaM7mthUpyJKcRk.JPG"
+        }
+      },
+      "isPromoted": false,
+      "odometerReading": {
+        "unit": "mile",
+        "value": 37326
+      },
+      "tradingMarket": "gb",
+      "vehicleType": "Car",
+      "pricing": {
+        "fullPrice": {
+          "centAmount": 1310000,
+          "currencyCode": "GBP",
+          "value": 13100
+        },
+        "pcmPrice": {
+          "pcp": {
+            "centAmount": 22434,
+            "currencyCode": "GBP",
+            "value": 224
+          },
+          "hp": {
+            "centAmount": 29847,
+            "currencyCode": "GBP",
+            "value": 298
+          },
+          "lowest": {
+            "centAmount": 22434,
+            "currencyCode": "GBP",
+            "value": 224,
+            "type": "pcp"
+          }
+        }
+      }
+    }
+  ],
+  "filters": {
+    "bodyType": [
+      {
+        "identifier": "Convertible",
+        "displayValue": "Convertible"
+      },
+      {
+        "identifier": "Coupe",
+        "displayValue": "Coupe"
+      },
+      {
+        "identifier": "Estate",
+        "displayValue": "Estate"
+      },
+      {
+        "identifier": "Hatchback",
+        "displayValue": "Hatchback"
+      },
+      {
+        "identifier": "MPV",
+        "displayValue": "MPV"
+      },
+      {
+        "identifier": "Saloon",
+        "displayValue": "Saloon"
+      },
+      {
+        "identifier": "SUV",
+        "displayValue": "SUV"
+      }
+    ],
+    "driveType": [
+      {
+        "identifier": "AllWheelDrive",
+        "displayValue": "Four wheel drive"
+      },
+      {
+        "identifier": "FrontWheelDrive",
+        "displayValue": "Front wheel drive"
+      },
+      {
+        "identifier": "RearWheelDrive",
+        "displayValue": "Rear wheel drive"
+      }
+    ],
+    "colour": [
+      {
+        "identifier": "White",
+        "displayValue": "White",
+        "background": "#ffffff"
+      },
+      {
+        "identifier": "Black",
+        "displayValue": "Black",
+        "background": "#000000"
+      },
+      {
+        "identifier": "Silver",
+        "displayValue": "Silver",
+        "background": "#b9b9b9"
+      },
+      {
+        "identifier": "Blue",
+        "displayValue": "Blue",
+        "background": "#2159bb"
+      },
+      {
+        "identifier": "Red",
+        "displayValue": "Red",
+        "background": "#eb0000"
+      },
+      {
+        "identifier": "Grey",
+        "displayValue": "Grey",
+        "background": "#616161"
+      },
+      {
+        "identifier": "Green",
+        "displayValue": "Green",
+        "background": "#5ebb21"
+      },
+      {
+        "identifier": "Yellow",
+        "displayValue": "Yellow",
+        "background": "#ffcd00"
+      },
+      {
+        "identifier": "Brown",
+        "displayValue": "Brown",
+        "background": "#8f5229"
+      },
+      {
+        "identifier": "Orange",
+        "displayValue": "Orange",
+        "background": "#ff7420"
+      },
+      {
+        "identifier": "Gold",
+        "displayValue": "Gold",
+        "background": "#dbba61"
+      },
+      {
+        "identifier": "Purple",
+        "displayValue": "Purple",
+        "background": "#604083"
+      },
+      {
+        "identifier": "Multicolour",
+        "displayValue": "Multicolour",
+        "background": "linear-gradient(45deg, #000000 50%, #b9b9b9 50%)"
+      }
+    ],
+    "gearbox": [
+      {
+        "identifier": "Manual",
+        "displayValue": "Manual"
+      },
+      {
+        "identifier": "Automatic",
+        "displayValue": "Automatic"
+      }
+    ],
+    "fuelType": [
+      {
+        "identifier": "Petrol",
+        "displayValue": "Petrol"
+      },
+      {
+        "identifier": "Diesel",
+        "displayValue": "Diesel"
+      },
+      {
+        "identifier": "Electric",
+        "displayValue": "Electric"
+      },
+      {
+        "identifier": "Hybrid",
+        "displayValue": "Hybrid"
+      },
+      {
+        "identifier": "Plug_in_Hybrid",
+        "displayValue": "Plug-in hybrid"
+      }
+    ],
+    "minMileage": [
+      {
+        "value": 0,
+        "displayValue": "0",
+        "unit": "mile",
+        "formattedDisplayValue": "0 miles"
+      },
+      {
+        "value": 5000,
+        "displayValue": "5,000",
+        "unit": "mile",
+        "formattedDisplayValue": "5,000 miles"
+      },
+      {
+        "value": 10000,
+        "displayValue": "10,000",
+        "unit": "mile",
+        "formattedDisplayValue": "10,000 miles"
+      },
+      {
+        "value": 20000,
+        "displayValue": "20,000",
+        "unit": "mile",
+        "formattedDisplayValue": "20,000 miles"
+      },
+      {
+        "value": 30000,
+        "displayValue": "30,000",
+        "unit": "mile",
+        "formattedDisplayValue": "30,000 miles"
+      },
+      {
+        "value": 40000,
+        "displayValue": "40,000",
+        "unit": "mile",
+        "formattedDisplayValue": "40,000 miles"
+      },
+      {
+        "value": 50000,
+        "displayValue": "50,000",
+        "unit": "mile",
+        "formattedDisplayValue": "50,000 miles"
+      },
+      {
+        "value": 60000,
+        "displayValue": "60,000",
+        "unit": "mile",
+        "formattedDisplayValue": "60,000 miles"
+      },
+      {
+        "value": 70000,
+        "displayValue": "70,000",
+        "unit": "mile",
+        "formattedDisplayValue": "70,000 miles"
+      },
+      {
+        "value": 80000,
+        "displayValue": "80,000",
+        "unit": "mile",
+        "formattedDisplayValue": "80,000 miles"
+      }
+    ],
+    "maxMileage": [
+      {
+        "value": 5000,
+        "displayValue": "5,000",
+        "unit": "mile",
+        "formattedDisplayValue": "5,000 miles"
+      },
+      {
+        "value": 10000,
+        "displayValue": "10,000",
+        "unit": "mile",
+        "formattedDisplayValue": "10,000 miles"
+      },
+      {
+        "value": 20000,
+        "displayValue": "20,000",
+        "unit": "mile",
+        "formattedDisplayValue": "20,000 miles"
+      },
+      {
+        "value": 30000,
+        "displayValue": "30,000",
+        "unit": "mile",
+        "formattedDisplayValue": "30,000 miles"
+      },
+      {
+        "value": 40000,
+        "displayValue": "40,000",
+        "unit": "mile",
+        "formattedDisplayValue": "40,000 miles"
+      },
+      {
+        "value": 50000,
+        "displayValue": "50,000",
+        "unit": "mile",
+        "formattedDisplayValue": "50,000 miles"
+      },
+      {
+        "value": 60000,
+        "displayValue": "60,000",
+        "unit": "mile",
+        "formattedDisplayValue": "60,000 miles"
+      },
+      {
+        "value": 70000,
+        "displayValue": "70,000",
+        "unit": "mile",
+        "formattedDisplayValue": "70,000 miles"
+      },
+      {
+        "value": 80000,
+        "displayValue": "80,000",
+        "unit": "mile",
+        "formattedDisplayValue": "80,000 miles"
+      }
+    ],
+    "minPrice": [
+      {
+        "value": 5000,
+        "displayValue": "5,000",
+        "unit": "GBP",
+        "formattedDisplayValue": "£5,000"
+      },
+      {
+        "value": 7500,
+        "displayValue": "7,500",
+        "unit": "GBP",
+        "formattedDisplayValue": "£7,500"
+      },
+      {
+        "value": 10000,
+        "displayValue": "10,000",
+        "unit": "GBP",
+        "formattedDisplayValue": "£10,000"
+      },
+      {
+        "value": 12500,
+        "displayValue": "12,500",
+        "unit": "GBP",
+        "formattedDisplayValue": "£12,500"
+      },
+      {
+        "value": 15000,
+        "displayValue": "15,000",
+        "unit": "GBP",
+        "formattedDisplayValue": "£15,000"
+      },
+      {
+        "value": 17500,
+        "displayValue": "17,500",
+        "unit": "GBP",
+        "formattedDisplayValue": "£17,500"
+      },
+      {
+        "value": 20000,
+        "displayValue": "20,000",
+        "unit": "GBP",
+        "formattedDisplayValue": "£20,000"
+      },
+      {
+        "value": 25000,
+        "displayValue": "25,000",
+        "unit": "GBP",
+        "formattedDisplayValue": "£25,000"
+      },
+      {
+        "value": 30000,
+        "displayValue": "30,000",
+        "unit": "GBP",
+        "formattedDisplayValue": "£30,000"
+      },
+      {
+        "value": 35000,
+        "displayValue": "35,000",
+        "unit": "GBP",
+        "formattedDisplayValue": "£35,000"
+      },
+      {
+        "value": 40000,
+        "displayValue": "40,000",
+        "unit": "GBP",
+        "formattedDisplayValue": "£40,000"
+      },
+      {
+        "value": 50000,
+        "displayValue": "50,000",
+        "unit": "GBP",
+        "formattedDisplayValue": "£50,000"
+      }
+    ],
+    "maxPrice": [
+      {
+        "value": 5000,
+        "displayValue": "5,000",
+        "unit": "GBP",
+        "formattedDisplayValue": "£5,000"
+      },
+      {
+        "value": 7500,
+        "displayValue": "7,500",
+        "unit": "GBP",
+        "formattedDisplayValue": "£7,500"
+      },
+      {
+        "value": 10000,
+        "displayValue": "10,000",
+        "unit": "GBP",
+        "formattedDisplayValue": "£10,000"
+      },
+      {
+        "value": 12500,
+        "displayValue": "12,500",
+        "unit": "GBP",
+        "formattedDisplayValue": "£12,500"
+      },
+      {
+        "value": 15000,
+        "displayValue": "15,000",
+        "unit": "GBP",
+        "formattedDisplayValue": "£15,000"
+      },
+      {
+        "value": 17500,
+        "displayValue": "17,500",
+        "unit": "GBP",
+        "formattedDisplayValue": "£17,500"
+      },
+      {
+        "value": 20000,
+        "displayValue": "20,000",
+        "unit": "GBP",
+        "formattedDisplayValue": "£20,000"
+      },
+      {
+        "value": 25000,
+        "displayValue": "25,000",
+        "unit": "GBP",
+        "formattedDisplayValue": "£25,000"
+      },
+      {
+        "value": 30000,
+        "displayValue": "30,000",
+        "unit": "GBP",
+        "formattedDisplayValue": "£30,000"
+      },
+      {
+        "value": 35000,
+        "displayValue": "35,000",
+        "unit": "GBP",
+        "formattedDisplayValue": "£35,000"
+      },
+      {
+        "value": 40000,
+        "displayValue": "40,000",
+        "unit": "GBP",
+        "formattedDisplayValue": "£40,000"
+      },
+      {
+        "value": 50000,
+        "displayValue": "50,000",
+        "unit": "GBP",
+        "formattedDisplayValue": "£50,000"
+      }
+    ],
+    "minMonthlyPrice": [
+      {
+        "value": 50,
+        "displayValue": "50",
+        "unit": "GBP",
+        "formattedDisplayValue": "£50"
+      },
+      {
+        "value": 100,
+        "displayValue": "100",
+        "unit": "GBP",
+        "formattedDisplayValue": "£100"
+      },
+      {
+        "value": 150,
+        "displayValue": "150",
+        "unit": "GBP",
+        "formattedDisplayValue": "£150"
+      },
+      {
+        "value": 200,
+        "displayValue": "200",
+        "unit": "GBP",
+        "formattedDisplayValue": "£200"
+      },
+      {
+        "value": 250,
+        "displayValue": "250",
+        "unit": "GBP",
+        "formattedDisplayValue": "£250"
+      },
+      {
+        "value": 300,
+        "displayValue": "300",
+        "unit": "GBP",
+        "formattedDisplayValue": "£300"
+      },
+      {
+        "value": 350,
+        "displayValue": "350",
+        "unit": "GBP",
+        "formattedDisplayValue": "£350"
+      },
+      {
+        "value": 400,
+        "displayValue": "400",
+        "unit": "GBP",
+        "formattedDisplayValue": "£400"
+      },
+      {
+        "value": 450,
+        "displayValue": "450",
+        "unit": "GBP",
+        "formattedDisplayValue": "£450"
+      },
+      {
+        "value": 500,
+        "displayValue": "500",
+        "unit": "GBP",
+        "formattedDisplayValue": "£500"
+      },
+      {
+        "value": 550,
+        "displayValue": "550",
+        "unit": "GBP",
+        "formattedDisplayValue": "£550"
+      },
+      {
+        "value": 600,
+        "displayValue": "600",
+        "unit": "GBP",
+        "formattedDisplayValue": "£600"
+      },
+      {
+        "value": 650,
+        "displayValue": "650",
+        "unit": "GBP",
+        "formattedDisplayValue": "£650"
+      },
+      {
+        "value": 700,
+        "displayValue": "700",
+        "unit": "GBP",
+        "formattedDisplayValue": "£700"
+      },
+      {
+        "value": 750,
+        "displayValue": "750",
+        "unit": "GBP",
+        "formattedDisplayValue": "£750"
+      },
+      {
+        "value": 800,
+        "displayValue": "800",
+        "unit": "GBP",
+        "formattedDisplayValue": "£800"
+      },
+      {
+        "value": 850,
+        "displayValue": "850",
+        "unit": "GBP",
+        "formattedDisplayValue": "£850"
+      },
+      {
+        "value": 900,
+        "displayValue": "900",
+        "unit": "GBP",
+        "formattedDisplayValue": "£900"
+      },
+      {
+        "value": 950,
+        "displayValue": "950",
+        "unit": "GBP",
+        "formattedDisplayValue": "£950"
+      },
+      {
+        "value": 1000,
+        "displayValue": "1,000",
+        "unit": "GBP",
+        "formattedDisplayValue": "£1,000"
+      }
+    ],
+    "maxMonthlyPrice": [
+      {
+        "value": 100,
+        "displayValue": "100",
+        "unit": "GBP",
+        "formattedDisplayValue": "£100"
+      },
+      {
+        "value": 150,
+        "displayValue": "150",
+        "unit": "GBP",
+        "formattedDisplayValue": "£150"
+      },
+      {
+        "value": 200,
+        "displayValue": "200",
+        "unit": "GBP",
+        "formattedDisplayValue": "£200"
+      },
+      {
+        "value": 250,
+        "displayValue": "250",
+        "unit": "GBP",
+        "formattedDisplayValue": "£250"
+      },
+      {
+        "value": 300,
+        "displayValue": "300",
+        "unit": "GBP",
+        "formattedDisplayValue": "£300"
+      },
+      {
+        "value": 350,
+        "displayValue": "350",
+        "unit": "GBP",
+        "formattedDisplayValue": "£350"
+      },
+      {
+        "value": 400,
+        "displayValue": "400",
+        "unit": "GBP",
+        "formattedDisplayValue": "£400"
+      },
+      {
+        "value": 450,
+        "displayValue": "450",
+        "unit": "GBP",
+        "formattedDisplayValue": "£450"
+      },
+      {
+        "value": 500,
+        "displayValue": "500",
+        "unit": "GBP",
+        "formattedDisplayValue": "£500"
+      },
+      {
+        "value": 550,
+        "displayValue": "550",
+        "unit": "GBP",
+        "formattedDisplayValue": "£550"
+      },
+      {
+        "value": 600,
+        "displayValue": "600",
+        "unit": "GBP",
+        "formattedDisplayValue": "£600"
+      },
+      {
+        "value": 650,
+        "displayValue": "650",
+        "unit": "GBP",
+        "formattedDisplayValue": "£650"
+      },
+      {
+        "value": 700,
+        "displayValue": "700",
+        "unit": "GBP",
+        "formattedDisplayValue": "£700"
+      },
+      {
+        "value": 750,
+        "displayValue": "750",
+        "unit": "GBP",
+        "formattedDisplayValue": "£750"
+      },
+      {
+        "value": 800,
+        "displayValue": "800",
+        "unit": "GBP",
+        "formattedDisplayValue": "£800"
+      },
+      {
+        "value": 850,
+        "displayValue": "850",
+        "unit": "GBP",
+        "formattedDisplayValue": "£850"
+      },
+      {
+        "value": 900,
+        "displayValue": "900",
+        "unit": "GBP",
+        "formattedDisplayValue": "£900"
+      },
+      {
+        "value": 950,
+        "displayValue": "950",
+        "unit": "GBP",
+        "formattedDisplayValue": "£950"
+      },
+      {
+        "value": 1000,
+        "displayValue": "1,000",
+        "unit": "GBP",
+        "formattedDisplayValue": "£1,000"
+      }
+    ],
+    "minSubscriptionMonthlyPrice": [
+      {
+        "value": 200,
+        "displayValue": "200",
+        "unit": "GBP",
+        "formattedDisplayValue": "£200"
+      },
+      {
+        "value": 250,
+        "displayValue": "250",
+        "unit": "GBP",
+        "formattedDisplayValue": "£250"
+      },
+      {
+        "value": 300,
+        "displayValue": "300",
+        "unit": "GBP",
+        "formattedDisplayValue": "£300"
+      },
+      {
+        "value": 350,
+        "displayValue": "350",
+        "unit": "GBP",
+        "formattedDisplayValue": "£350"
+      },
+      {
+        "value": 400,
+        "displayValue": "400",
+        "unit": "GBP",
+        "formattedDisplayValue": "£400"
+      },
+      {
+        "value": 450,
+        "displayValue": "450",
+        "unit": "GBP",
+        "formattedDisplayValue": "£450"
+      },
+      {
+        "value": 500,
+        "displayValue": "500",
+        "unit": "GBP",
+        "formattedDisplayValue": "£500"
+      },
+      {
+        "value": 550,
+        "displayValue": "550",
+        "unit": "GBP",
+        "formattedDisplayValue": "£550"
+      },
+      {
+        "value": 600,
+        "displayValue": "600",
+        "unit": "GBP",
+        "formattedDisplayValue": "£600"
+      },
+      {
+        "value": 650,
+        "displayValue": "650",
+        "unit": "GBP",
+        "formattedDisplayValue": "£650"
+      },
+      {
+        "value": 700,
+        "displayValue": "700",
+        "unit": "GBP",
+        "formattedDisplayValue": "£700"
+      },
+      {
+        "value": 750,
+        "displayValue": "750",
+        "unit": "GBP",
+        "formattedDisplayValue": "£750"
+      },
+      {
+        "value": 800,
+        "displayValue": "800",
+        "unit": "GBP",
+        "formattedDisplayValue": "£800"
+      },
+      {
+        "value": 850,
+        "displayValue": "850",
+        "unit": "GBP",
+        "formattedDisplayValue": "£850"
+      },
+      {
+        "value": 900,
+        "displayValue": "900",
+        "unit": "GBP",
+        "formattedDisplayValue": "£900"
+      },
+      {
+        "value": 950,
+        "displayValue": "950",
+        "unit": "GBP",
+        "formattedDisplayValue": "£950"
+      },
+      {
+        "value": 1000,
+        "displayValue": "1,000",
+        "unit": "GBP",
+        "formattedDisplayValue": "£1,000"
+      }
+    ],
+    "maxSubscriptionMonthlyPrice": [
+      {
+        "value": 250,
+        "displayValue": "250",
+        "unit": "GBP",
+        "formattedDisplayValue": "£250"
+      },
+      {
+        "value": 300,
+        "displayValue": "300",
+        "unit": "GBP",
+        "formattedDisplayValue": "£300"
+      },
+      {
+        "value": 350,
+        "displayValue": "350",
+        "unit": "GBP",
+        "formattedDisplayValue": "£350"
+      },
+      {
+        "value": 400,
+        "displayValue": "400",
+        "unit": "GBP",
+        "formattedDisplayValue": "£400"
+      },
+      {
+        "value": 450,
+        "displayValue": "450",
+        "unit": "GBP",
+        "formattedDisplayValue": "£450"
+      },
+      {
+        "value": 500,
+        "displayValue": "500",
+        "unit": "GBP",
+        "formattedDisplayValue": "£500"
+      },
+      {
+        "value": 550,
+        "displayValue": "550",
+        "unit": "GBP",
+        "formattedDisplayValue": "£550"
+      },
+      {
+        "value": 600,
+        "displayValue": "600",
+        "unit": "GBP",
+        "formattedDisplayValue": "£600"
+      },
+      {
+        "value": 650,
+        "displayValue": "650",
+        "unit": "GBP",
+        "formattedDisplayValue": "£650"
+      },
+      {
+        "value": 700,
+        "displayValue": "700",
+        "unit": "GBP",
+        "formattedDisplayValue": "£700"
+      },
+      {
+        "value": 750,
+        "displayValue": "750",
+        "unit": "GBP",
+        "formattedDisplayValue": "£750"
+      },
+      {
+        "value": 800,
+        "displayValue": "800",
+        "unit": "GBP",
+        "formattedDisplayValue": "£800"
+      },
+      {
+        "value": 850,
+        "displayValue": "850",
+        "unit": "GBP",
+        "formattedDisplayValue": "£850"
+      },
+      {
+        "value": 900,
+        "displayValue": "900",
+        "unit": "GBP",
+        "formattedDisplayValue": "£900"
+      },
+      {
+        "value": 950,
+        "displayValue": "950",
+        "unit": "GBP",
+        "formattedDisplayValue": "£950"
+      },
+      {
+        "value": 1000,
+        "displayValue": "1,000",
+        "unit": "GBP",
+        "formattedDisplayValue": "£1,000"
+      }
+    ],
+    "verifiedFeatures": [
+      {
+        "identifier": "activeCruiseControl",
+        "displayValue": "Active cruise control"
+      },
+      {
+        "identifier": "aircon",
+        "displayValue": "Air con"
+      },
+      {
+        "identifier": "alloys",
+        "displayValue": "Alloys"
+      },
+      {
+        "identifier": "bluetooth",
+        "displayValue": "Bluetooth"
+      },
+      {
+        "identifier": "cdPlayer",
+        "displayValue": "CD Player"
+      },
+      {
+        "identifier": "cruiseControl",
+        "displayValue": "Cruise control"
+      },
+      {
+        "identifier": "dab",
+        "displayValue": "DAB"
+      },
+      {
+        "identifier": "dvdPlayer",
+        "displayValue": "DVD Player"
+      },
+      {
+        "identifier": "headUpDisplay",
+        "displayValue": "Head-up display"
+      },
+      {
+        "identifier": "heatedSeats",
+        "displayValue": "Heated seats"
+      },
+      {
+        "identifier": "heatedWindscreen",
+        "displayValue": "Heated windscreen"
+      },
+      {
+        "identifier": "keylessEntry",
+        "displayValue": "Keyless entry"
+      },
+      {
+        "identifier": "leatherSeats",
+        "displayValue": "Leather seats"
+      },
+      {
+        "identifier": "metallicPaint",
+        "displayValue": "Metallic paint"
+      },
+      {
+        "identifier": "paddleShift",
+        "displayValue": "Paddle shift"
+      },
+      {
+        "identifier": "parkingCamera",
+        "displayValue": "Parking camera"
+      },
+      {
+        "identifier": "parkingSensors",
+        "displayValue": "Parking sensors"
+      },
+      {
+        "identifier": "premiumSoundSystem",
+        "displayValue": "Premium sound system"
+      },
+      {
+        "identifier": "privacyGlass",
+        "displayValue": "Privacy glass"
+      },
+      {
+        "identifier": "satNav",
+        "displayValue": "Sat nav"
+      },
+      {
+        "identifier": "selfParking",
+        "displayValue": "Self-parking"
+      },
+      {
+        "identifier": "startStop",
+        "displayValue": "Start/stop technology"
+      },
+      {
+        "identifier": "sunroof",
+        "displayValue": "Sunroof"
+      },
+      {
+        "identifier": "towbar",
+        "displayValue": "Towbar"
+      }
+    ],
+    "minManufacturedYear": [
+      {
+        "value": 2021
+      },
+      {
+        "value": 2020
+      },
+      {
+        "value": 2019
+      },
+      {
+        "value": 2018
+      },
+      {
+        "value": 2017
+      },
+      {
+        "value": 2016
+      },
+      {
+        "value": 2015
+      },
+      {
+        "value": 2014
+      }
+    ],
+    "maxManufacturedYear": [
+      {
+        "value": 2021
+      },
+      {
+        "value": 2020
+      },
+      {
+        "value": 2019
+      },
+      {
+        "value": 2018
+      },
+      {
+        "value": 2017
+      },
+      {
+        "value": 2016
+      },
+      {
+        "value": 2015
+      },
+      {
+        "value": 2014
+      }
+    ],
+    "co2EmissionsGPerKm": [
+      {
+        "value": 75
+      },
+      {
+        "value": 100
+      },
+      {
+        "value": 110
+      },
+      {
+        "value": 120
+      },
+      {
+        "value": 130
+      },
+      {
+        "value": 140
+      },
+      {
+        "value": 150
+      },
+      {
+        "value": 165
+      },
+      {
+        "value": 175
+      },
+      {
+        "value": 185
+      },
+      {
+        "value": 200
+      },
+      {
+        "value": 225
+      },
+      {
+        "value": 255
+      }
+    ],
+    "runningCosts": [
+      {
+        "identifier": "ulezChargeExempt",
+        "displayValue": "ULEZ compliant"
+      }
+    ],
+    "minEngineSizeLitres": [
+      {
+        "value": 1,
+        "displayValue": "1.0",
+        "unit": "liter",
+        "formattedDisplayValue": "1.0L"
+      },
+      {
+        "value": 1.2,
+        "displayValue": "1.2",
+        "unit": "liter",
+        "formattedDisplayValue": "1.2L"
+      },
+      {
+        "value": 1.4,
+        "displayValue": "1.4",
+        "unit": "liter",
+        "formattedDisplayValue": "1.4L"
+      },
+      {
+        "value": 1.6,
+        "displayValue": "1.6",
+        "unit": "liter",
+        "formattedDisplayValue": "1.6L"
+      },
+      {
+        "value": 1.8,
+        "displayValue": "1.8",
+        "unit": "liter",
+        "formattedDisplayValue": "1.8L"
+      },
+      {
+        "value": 1.9,
+        "displayValue": "1.9",
+        "unit": "liter",
+        "formattedDisplayValue": "1.9L"
+      },
+      {
+        "value": 2,
+        "displayValue": "2.0",
+        "unit": "liter",
+        "formattedDisplayValue": "2.0L"
+      },
+      {
+        "value": 2.2,
+        "displayValue": "2.2",
+        "unit": "liter",
+        "formattedDisplayValue": "2.2L"
+      },
+      {
+        "value": 2.4,
+        "displayValue": "2.4",
+        "unit": "liter",
+        "formattedDisplayValue": "2.4L"
+      },
+      {
+        "value": 2.6,
+        "displayValue": "2.6",
+        "unit": "liter",
+        "formattedDisplayValue": "2.6L"
+      },
+      {
+        "value": 3,
+        "displayValue": "3.0",
+        "unit": "liter",
+        "formattedDisplayValue": "3.0L"
+      },
+      {
+        "value": 3.5,
+        "displayValue": "3.5",
+        "unit": "liter",
+        "formattedDisplayValue": "3.5L"
+      },
+      {
+        "value": 4,
+        "displayValue": "4.0",
+        "unit": "liter",
+        "formattedDisplayValue": "4.0L"
+      },
+      {
+        "value": 4.5,
+        "displayValue": "4.5",
+        "unit": "liter",
+        "formattedDisplayValue": "4.5L"
+      },
+      {
+        "value": 5,
+        "displayValue": "5.0",
+        "unit": "liter",
+        "formattedDisplayValue": "5.0L"
+      },
+      {
+        "value": 5.5,
+        "displayValue": "5.5",
+        "unit": "liter",
+        "formattedDisplayValue": "5.5L"
+      },
+      {
+        "value": 6,
+        "displayValue": "6.0",
+        "unit": "liter",
+        "formattedDisplayValue": "6.0L"
+      },
+      {
+        "value": 6.5,
+        "displayValue": "6.5",
+        "unit": "liter",
+        "formattedDisplayValue": "6.5L"
+      },
+      {
+        "value": 7,
+        "displayValue": "7.0",
+        "unit": "liter",
+        "formattedDisplayValue": "7.0L"
+      }
+    ],
+    "maxEngineSizeLitres": [
+      {
+        "value": 1,
+        "displayValue": "1.0",
+        "unit": "liter",
+        "formattedDisplayValue": "1.0L"
+      },
+      {
+        "value": 1.2,
+        "displayValue": "1.2",
+        "unit": "liter",
+        "formattedDisplayValue": "1.2L"
+      },
+      {
+        "value": 1.4,
+        "displayValue": "1.4",
+        "unit": "liter",
+        "formattedDisplayValue": "1.4L"
+      },
+      {
+        "value": 1.6,
+        "displayValue": "1.6",
+        "unit": "liter",
+        "formattedDisplayValue": "1.6L"
+      },
+      {
+        "value": 1.8,
+        "displayValue": "1.8",
+        "unit": "liter",
+        "formattedDisplayValue": "1.8L"
+      },
+      {
+        "value": 1.9,
+        "displayValue": "1.9",
+        "unit": "liter",
+        "formattedDisplayValue": "1.9L"
+      },
+      {
+        "value": 2,
+        "displayValue": "2.0",
+        "unit": "liter",
+        "formattedDisplayValue": "2.0L"
+      },
+      {
+        "value": 2.2,
+        "displayValue": "2.2",
+        "unit": "liter",
+        "formattedDisplayValue": "2.2L"
+      },
+      {
+        "value": 2.4,
+        "displayValue": "2.4",
+        "unit": "liter",
+        "formattedDisplayValue": "2.4L"
+      },
+      {
+        "value": 2.6,
+        "displayValue": "2.6",
+        "unit": "liter",
+        "formattedDisplayValue": "2.6L"
+      },
+      {
+        "value": 3,
+        "displayValue": "3.0",
+        "unit": "liter",
+        "formattedDisplayValue": "3.0L"
+      },
+      {
+        "value": 3.5,
+        "displayValue": "3.5",
+        "unit": "liter",
+        "formattedDisplayValue": "3.5L"
+      },
+      {
+        "value": 4,
+        "displayValue": "4.0",
+        "unit": "liter",
+        "formattedDisplayValue": "4.0L"
+      },
+      {
+        "value": 4.5,
+        "displayValue": "4.5",
+        "unit": "liter",
+        "formattedDisplayValue": "4.5L"
+      },
+      {
+        "value": 5,
+        "displayValue": "5.0",
+        "unit": "liter",
+        "formattedDisplayValue": "5.0L"
+      },
+      {
+        "value": 5.5,
+        "displayValue": "5.5",
+        "unit": "liter",
+        "formattedDisplayValue": "5.5L"
+      },
+      {
+        "value": 6,
+        "displayValue": "6.0",
+        "unit": "liter",
+        "formattedDisplayValue": "6.0L"
+      },
+      {
+        "value": 6.5,
+        "displayValue": "6.5",
+        "unit": "liter",
+        "formattedDisplayValue": "6.5L"
+      },
+      {
+        "value": 7,
+        "displayValue": "7.0",
+        "unit": "liter",
+        "formattedDisplayValue": "7.0L"
+      }
+    ],
+    "numDoors": [
+      {
+        "identifier": "2,3",
+        "displayValue": "2-3 doors"
+      },
+      {
+        "identifier": "4,5",
+        "displayValue": "4-5 doors"
+      }
+    ],
+    "numSeats": [
+      {
+        "identifier": "2",
+        "displayValue": "2 seats"
+      },
+      {
+        "identifier": "4",
+        "displayValue": "4 seats"
+      },
+      {
+        "identifier": "5",
+        "displayValue": "5 seats"
+      },
+      {
+        "identifier": "7",
+        "displayValue": "7 seats"
+      }
+    ],
+    "ownershipType": [
+      {
+        "identifier": "purchase",
+        "displayValue": "Used cars"
+      },
+      {
+        "identifier": "subscription",
+        "displayValue": "New cars"
+      }
+    ],
+    "combinedConsumptionMpg": [
+      {
+        "value": 20,
+        "displayValue": "20",
+        "unit": "mile-per-gallon",
+        "formattedDisplayValue": "20+ mpg"
+      },
+      {
+        "value": 30,
+        "displayValue": "30",
+        "unit": "mile-per-gallon",
+        "formattedDisplayValue": "30+ mpg"
+      },
+      {
+        "value": 40,
+        "displayValue": "40",
+        "unit": "mile-per-gallon",
+        "formattedDisplayValue": "40+ mpg"
+      },
+      {
+        "value": 50,
+        "displayValue": "50",
+        "unit": "mile-per-gallon",
+        "formattedDisplayValue": "50+ mpg"
+      },
+      {
+        "value": 60,
+        "displayValue": "60",
+        "unit": "mile-per-gallon",
+        "formattedDisplayValue": "60+ mpg"
+      }
+    ],
+    "financeDeposit": [
+      {
+        "value": 100,
+        "displayValue": "100",
+        "unit": "GBP",
+        "formattedDisplayValue": "£100"
+      },
+      {
+        "value": 500,
+        "displayValue": "500",
+        "unit": "GBP",
+        "formattedDisplayValue": "£500"
+      },
+      {
+        "value": 1000,
+        "displayValue": "1,000",
+        "unit": "GBP",
+        "formattedDisplayValue": "£1,000"
+      },
+      {
+        "value": 1500,
+        "displayValue": "1,500",
+        "unit": "GBP",
+        "formattedDisplayValue": "£1,500"
+      },
+      {
+        "value": 2000,
+        "displayValue": "2,000",
+        "unit": "GBP",
+        "formattedDisplayValue": "£2,000"
+      },
+      {
+        "value": 2500,
+        "displayValue": "2,500",
+        "unit": "GBP",
+        "formattedDisplayValue": "£2,500"
+      },
+      {
+        "value": 3000,
+        "displayValue": "3,000",
+        "unit": "GBP",
+        "formattedDisplayValue": "£3,000"
+      },
+      {
+        "value": 3500,
+        "displayValue": "3,500",
+        "unit": "GBP",
+        "formattedDisplayValue": "£3,500"
+      },
+      {
+        "value": 4000,
+        "displayValue": "4,000",
+        "unit": "GBP",
+        "formattedDisplayValue": "£4,000"
+      },
+      {
+        "value": 5000,
+        "displayValue": "5,000",
+        "unit": "GBP",
+        "formattedDisplayValue": "£5,000"
+      },
+      {
+        "value": 10000,
+        "displayValue": "10,000",
+        "unit": "GBP",
+        "formattedDisplayValue": "£10,000"
+      }
+    ],
+    "financeLengthOfTerm": [
+      {
+        "value": 24
+      },
+      {
+        "value": 36
+      },
+      {
+        "value": 48
+      },
+      {
+        "value": 60
+      }
+    ],
+    "make": [
+      {
+        "identifier": "abarth",
+        "displayValue": "Abarth"
+      },
+      {
+        "identifier": "alfa-romeo",
+        "displayValue": "Alfa Romeo"
+      },
+      {
+        "identifier": "audi",
+        "displayValue": "Audi"
+      },
+      {
+        "identifier": "bmw",
+        "displayValue": "BMW"
+      },
+      {
+        "identifier": "citroen",
+        "displayValue": "Citroen"
+      },
+      {
+        "identifier": "citroen",
+        "displayValue": "Citroën"
+      },
+      {
+        "identifier": "cupra",
+        "displayValue": "Cupra"
+      },
+      {
+        "identifier": "dacia",
+        "displayValue": "Dacia"
+      },
+      {
+        "identifier": "ds",
+        "displayValue": "DS"
+      },
+      {
+        "identifier": "fiat",
+        "displayValue": "Fiat"
+      },
+      {
+        "identifier": "ford",
+        "displayValue": "Ford"
+      },
+      {
+        "identifier": "honda",
+        "displayValue": "Honda"
+      },
+      {
+        "identifier": "hyundai",
+        "displayValue": "Hyundai"
+      },
+      {
+        "identifier": "infiniti",
+        "displayValue": "Infiniti"
+      },
+      {
+        "identifier": "jaguar",
+        "displayValue": "Jaguar"
+      },
+      {
+        "identifier": "jeep",
+        "displayValue": "Jeep"
+      },
+      {
+        "identifier": "kia",
+        "displayValue": "Kia"
+      },
+      {
+        "identifier": "land-rover",
+        "displayValue": "Land Rover"
+      },
+      {
+        "identifier": "lexus",
+        "displayValue": "Lexus"
+      },
+      {
+        "identifier": "maserati",
+        "displayValue": "Maserati"
+      },
+      {
+        "identifier": "mazda",
+        "displayValue": "Mazda"
+      },
+      {
+        "identifier": "mercedes-benz",
+        "displayValue": "Mercedes-Benz"
+      },
+      {
+        "identifier": "mg",
+        "displayValue": "MG"
+      },
+      {
+        "identifier": "mini",
+        "displayValue": "Mini"
+      },
+      {
+        "identifier": "mini",
+        "displayValue": "MINI"
+      },
+      {
+        "identifier": "mitsubishi",
+        "displayValue": "Mitsubishi"
+      },
+      {
+        "identifier": "nissan",
+        "displayValue": "Nissan"
+      },
+      {
+        "identifier": "opel",
+        "displayValue": "Opel"
+      },
+      {
+        "identifier": "peugeot",
+        "displayValue": "Peugeot"
+      },
+      {
+        "identifier": "porsche",
+        "displayValue": "Porsche"
+      },
+      {
+        "identifier": "renault",
+        "displayValue": "Renault"
+      },
+      {
+        "identifier": "seat",
+        "displayValue": "Seat"
+      },
+      {
+        "identifier": "skoda",
+        "displayValue": "Skoda"
+      },
+      {
+        "identifier": "smart",
+        "displayValue": "Smart"
+      },
+      {
+        "identifier": "ssangyong",
+        "displayValue": "Ssangyong"
+      },
+      {
+        "identifier": "subaru",
+        "displayValue": "Subaru"
+      },
+      {
+        "identifier": "suzuki",
+        "displayValue": "Suzuki"
+      },
+      {
+        "identifier": "tesla",
+        "displayValue": "Tesla"
+      },
+      {
+        "identifier": "toyota",
+        "displayValue": "Toyota"
+      },
+      {
+        "identifier": "vauxhall",
+        "displayValue": "Vauxhall"
+      },
+      {
+        "identifier": "volkswagen",
+        "displayValue": "Volkswagen"
+      },
+      {
+        "identifier": "volvo",
+        "displayValue": "Volvo"
+      }
+    ]
+  },
+  "pagination": {
+    "currentPageIndex": 1,
+    "requestPageSize": 48,
+    "totalPages": 146,
+    "totalItems": 6998
+  }
+}

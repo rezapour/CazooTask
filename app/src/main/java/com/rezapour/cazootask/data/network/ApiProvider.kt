@@ -1,4 +1,4 @@
-package com.rezapour.cazootask.data
+package com.rezapour.cazootask.data.network
 
 import com.rezapour.cazootask.data.network.model.search.CarListNetworkEntity
 import retrofit2.Response
