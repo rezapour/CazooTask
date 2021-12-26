@@ -1,11 +1,12 @@
 package com.rezapour.cazootask.data.network.model.search
 
 
+import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 data class PriceModelNetworkEntity(
-    @SerializedName("centAmount") val centAmount: Int,
-    @SerializedName("currencyCode") val currencyCode: String,
-    @SerializedName("value") val value: Int,
-    @SerializedName("type") val type: String?
+    @Expose @SerializedName("centAmount") val centAmount: Int,
+    @Expose @SerializedName("currencyCode") val currencyCode: String,
+    @Expose @SerializedName("value") val value: Long,
+    @Expose @SerializedName("type") val type: String?
 )

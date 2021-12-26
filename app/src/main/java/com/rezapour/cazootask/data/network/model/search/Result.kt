@@ -1,25 +1,26 @@
 package com.rezapour.cazootask.data.network.model.search
 
 
+import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 data class Result(
-    @SerializedName("createdAt") val createdAt: String,
-    @SerializedName("id") val id: String,
-    @SerializedName("make") val make: String,
-    @SerializedName("model") val model: String,
-    @SerializedName("modelYear") val modelYear: Int,
-    @SerializedName("displayVariant") val displayVariant: String,
-    @SerializedName("mileage") val mileage: Int,
-    @SerializedName("registrationYear") val registrationYear: Int,
-    @SerializedName("vrm") val vrm: String,
-    @SerializedName("isForSubscription") val isForSubscription: Boolean,
-    @SerializedName("isForPurchase") val isForPurchase: Boolean,
-    @SerializedName("fuelType") val fuelType: FuelType,
-    @SerializedName("images") val images: Images,
-    @SerializedName("isPromoted") val isPromoted: Boolean,
-    @SerializedName("odometerReading") val odometerReading: OdometerReading,
-    @SerializedName("tradingMarket") val tradingMarket: String,
-    @SerializedName("vehicleType") val vehicleType: String,
-    @SerializedName("pricing") val pricing: Pricing
+    @Expose @SerializedName("createdAt") val createdAt: String,
+    @Expose @SerializedName("id") val id: String,
+    @Expose @SerializedName("make") val make: String,
+    @Expose @SerializedName("model") val model: String,
+    @Expose @SerializedName("modelYear") val modelYear: Int,
+    @Expose @SerializedName("displayVariant") val displayVariant: String,
+    @Expose @SerializedName("mileage") val mileage: Long,
+    @Expose @SerializedName("registrationYear") val registrationYear: Int,
+    @Expose @SerializedName("vrm") val vrm: String,
+    @Expose @SerializedName("isForSubscription") val isForSubscription: Boolean,
+    @Expose @SerializedName("isForPurchase") val isForPurchase: Boolean,
+    @Expose @SerializedName("fuelType") val fuelType: FuelType,
+    @Expose @SerializedName("images") val images: Images,
+    @Expose @SerializedName("isPromoted") val isPromoted: Boolean,
+    @Expose @SerializedName("odometerReading") val odometerReading: OdometerReading,
+    @Expose @SerializedName("tradingMarket") val tradingMarket: String,
+    @Expose @SerializedName("vehicleType") val vehicleType: String,
+    @Expose @SerializedName("pricing") val pricing: Pricing
 )
