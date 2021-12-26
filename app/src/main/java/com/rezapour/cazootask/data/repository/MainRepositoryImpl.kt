@@ -16,7 +16,6 @@ class MainRepositoryImpl @Inject constructor(
 ) :
     MainRepository {
     override suspend fun getCarList(): Flow<DataState<List<CarsListDetatil>>> = flow {
-        emit(DataState.Loading)
         try {
             val response = apiProvider.getCarList()
             if (response.isSuccessful && response.body() != null) {
@@ -25,9 +24,7 @@ class MainRepositoryImpl @Inject constructor(
             } else {
                 emit(DataState.Error(Messages.Error.NO_CONTENT))
             }
-
         } catch (e: Exception) {
-            val ed = e
             emit(DataState.Error(Messages.Error.INTERNET_CONNECTION_LIST))
         }
 
