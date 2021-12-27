@@ -45,5 +45,4 @@ data class VehicleNetworkEntity(
     @Expose @SerializedName("consumption") val consumption: List<DisplayValueNetworkEntity>
 
 
-) {
-}
+)

@@ -109,6 +109,56 @@
           }
         }
       }
+    },
+    {
+      "createdAt": "2021-12-24T14:28:16.691Z",
+      "id": "1956cdc7-ca26-5b47-ac1e-f76be6178c05",
+      "make": "Mercedes-Benz",
+      "model": "C Class",
+      "modelYear": 2016,
+      "displayVariant": "2L AMG Line C200",
+      "mileage": 47257,
+      "registrationYear": 2015,
+      "vrm": "EO65EKU",
+      "isForSubscription": false,
+      "isForPurchase": true,
+      "fuelType": {
+        "description": "Petrol",
+        "isEcoFriendly": false,
+        "isPlugin": false
+      },
+      "images": {
+        "main": {
+          "url": "https://res.cloudinary.com/cazoo/image/upload/c_scale,f_auto,h_405,q_auto,w_720/cazoo-imagery/car_gallery_images/WDD2052422F241213/j60PolsQ9hhj3xa6MncF.JPG"
+        }
+      },
+      "isPromoted": false,
+      "odometerReading": {
+        "unit": "mile",
+        "value": 47257
+      },
+      "tradingMarket": "gb",
+      "vehicleType": "Car",
+      "pricing": {
+        "fullPrice": {
+          "centAmount": 2027500,
+          "currencyCode": "GBP",
+          "value": 20275
+        },
+        "pcmPrice": {
+          "hp": {
+            "centAmount": 47545,
+            "currencyCode": "GBP",
+            "value": 475
+          },
+          "lowest": {
+            "centAmount": 47545,
+            "currencyCode": "GBP",
+            "value": 475,
+            "type": "hp"
+          }
+        }
+      }
     }
   ],
   "filters": {

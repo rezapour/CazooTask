@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName
 data class RunningCostsNetWorkEntity(
     @Expose @SerializedName("insuranceGroup") val insuranceGroup: Int,
     @Expose @SerializedName("insuranceCostPerYear") val insuranceCostPerYear: CostNetWorkEntity,
-    @Expose @SerializedName("insuranceCostPerYear") val fuelConsumptionMpg: Double,
+    @Expose @SerializedName("fuelConsumptionMpg") val fuelConsumptionMpg: Double,
     @Expose @SerializedName("fuelConsumptionCostPerWeek") val fuelConsumptionCostPerWeek: CostNetWorkEntity
 
     )

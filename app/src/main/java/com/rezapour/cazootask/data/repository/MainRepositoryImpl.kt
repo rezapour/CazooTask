@@ -3,6 +3,7 @@ package com.rezapour.cazootask.data.repository
 import com.rezapour.cazootask.assets.Messages
 import com.rezapour.cazootask.data.network.ApiProvider
 import com.rezapour.cazootask.data.network.mapper.NetworkMapper
+import com.rezapour.cazootask.data.network.model.vehicles.VehicleNetworkEntity
 import com.rezapour.cazootask.model.CarsListDetatil
 import com.rezapour.cazootask.util.DataState
 import kotlinx.coroutines.flow.Flow
@@ -27,7 +28,20 @@ class MainRepositoryImpl @Inject constructor(
         } catch (e: Exception) {
             emit(DataState.Error(Messages.Error.INTERNET_CONNECTION_LIST))
         }
-
-
     }
+
+    override suspend fun getVehicleDetail(id: String): Flow<DataState<VehicleNetworkEntity>> =
+        flow {
+            try {
+                val response = apiProvider.getVehicleDetail(id)
+                if (response.isSuccessful && response.body() != null) {
+                    emit(DataState.Success(response.body()!!))
+                } else {
+                    emit(DataState.Error(Messages.Error.NO_CONTENT))
+                }
+            } catch (e: Exception) {
+                val ex = e
+                emit(DataState.Error(Messages.Error.INTERNET_CONNECTION_LIST))
+            }
+        }
 }

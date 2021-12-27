@@ -27,6 +27,7 @@ class MainRepositoryImplTest {
     lateinit var mockWebServer: MockWebServer
     lateinit var repository: MainRepositoryImpl
     lateinit var respondBody: String
+    lateinit var respondBodyVehicleDetile: String
 
     @Before
     fun setUp() {
@@ -39,6 +40,10 @@ class MainRepositoryImplTest {
         val inputStream: InputStream =
             File(getResource("searchApiRespond.json").toURI()).inputStream()
         respondBody = inputStream.bufferedReader().use { it.readText() }
+
+        val inputStreamVehicleDetile: InputStream =
+            File(getResource("searchApiRespond.json").toURI()).inputStream()
+        respondBodyVehicleDetile = inputStreamVehicleDetile.bufferedReader().use { it.readText() }
 
     }
 
@@ -71,6 +76,53 @@ class MainRepositoryImplTest {
 
         runBlocking {
             repository.getCarList().test {
+                assertThat(awaitItem()).isInstanceOf(DataState.Error::class.java)
+                awaitComplete()
+            }
+        }
+    }
+
+
+    @Test
+    fun `getVehicleDeties () test Success`() {
+        val mock = MockResponse()
+            .setResponseCode(HttpURLConnection.HTTP_OK)
+            .setBody(respondBodyVehicleDetile)
+        mockWebServer.enqueue(mock)
+
+        runBlocking {
+            repository.getVehicleDetail("1").test {
+                assertThat(awaitItem()).isInstanceOf(DataState.Success::class.java)
+                awaitComplete()
+            }
+        }
+    }
+
+
+    @Test
+    fun `getVehicleDetail() test Error no content`() {
+        val mock = MockResponse()
+            .setResponseCode(HttpURLConnection.HTTP_NO_CONTENT)
+            .setBody(respondBodyVehicleDetile)
+        mockWebServer.enqueue(mock)
+
+        runBlocking {
+            repository.getVehicleDetail("1").test {
+                assertThat(awaitItem()).isInstanceOf(DataState.Error::class.java)
+                awaitComplete()
+            }
+        }
+    }
+
+    @Test
+    fun `getVehicleDeties() test Error`() {
+        val mock = MockResponse()
+            .setResponseCode(HttpURLConnection.HTTP_GATEWAY_TIMEOUT)
+            .setBody(respondBodyVehicleDetile)
+        mockWebServer.enqueue(mock)
+
+        runBlocking {
+            repository.getVehicleDetail("1").test {
                 assertThat(awaitItem()).isInstanceOf(DataState.Error::class.java)
                 awaitComplete()
             }
