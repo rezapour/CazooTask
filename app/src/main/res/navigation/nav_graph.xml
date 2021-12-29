@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/vehicleDetailFragment">
+    app:startDestination="@id/carListFragment">
 
     <fragment
         android:id="@+id/carListFragment"
@@ -18,5 +18,9 @@
         android:id="@+id/vehicleDetailFragment"
         android:name="com.rezapour.cazootask.ui.VehicleDetailFragment"
         android:label="fragment_vehicle_detail"
-        tools:layout="@layout/fragment_vehicle_detail" />
+        tools:layout="@layout/fragment_vehicle_detail">
+        <argument
+            android:name="carId"
+            app:argType="string" />
+    </fragment>
 </navigation>

@@ -18,7 +18,7 @@ class MainViewModel @Inject constructor(
 
     private val _dataStateListOfCars: MutableLiveData<DataState<List<CarsListDetatil>>> =
         MutableLiveData()
-    private val dataStatListOfCars: LiveData<DataState<List<CarsListDetatil>>> get() = _dataStateListOfCars
+    val dataStatListOfCars: LiveData<DataState<List<CarsListDetatil>>> get() = _dataStateListOfCars
 
     fun getCarsList() {
         _dataStateListOfCars.value = DataState.Loading

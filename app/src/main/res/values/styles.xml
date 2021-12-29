@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.Shrine.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/saira</item>
+        <item name="android:fontFamily">@font/saira</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>
