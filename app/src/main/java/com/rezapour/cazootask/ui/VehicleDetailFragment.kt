@@ -1,5 +1,6 @@
 package com.rezapour.cazootask.ui
 
+import android.app.ActionBar
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -19,6 +20,9 @@ import java.util.*
 import android.widget.LinearLayout
 
 import android.widget.TextView
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import com.google.android.material.appbar.MaterialToolbar
 import com.rezapour.cazootask.data.network.model.vehicles.*
 
 
@@ -30,7 +34,9 @@ class VehicleDetailFragment : Fragment() {
     private var _binding: FragmentVehicleDetailBinding? = null
     private val binding get() = _binding!!
     private val args: VehicleDetailFragmentArgs by navArgs()
+    private var navControler: NavController? = null
 
+    private lateinit var actionBar: MaterialToolbar
     private lateinit var txrVehicleName: TextView
     private lateinit var textEngine: TextView
     private lateinit var txtMileAge: TextView
@@ -57,6 +63,7 @@ class VehicleDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        navControler = Navigation.findNavController(view)
         val id = args.carId
         setUp(id)
     }
@@ -81,6 +88,12 @@ class VehicleDetailFragment : Fragment() {
 
 
     private fun setUpUi() {
+
+        actionBar = binding.topAppBar
+        actionBar.setNavigationOnClickListener {
+            navControler!!.navigateUp()
+        }
+
         txrVehicleName = binding.txtVehicleDetailName
         textEngine = binding.txtEngineDetail
         txtMileAge = binding.txtMileageDetail
@@ -158,7 +171,6 @@ class VehicleDetailFragment : Fragment() {
         val summryRow = SummaryRowBinding.inflate(layoutInflater)
         summryRow.txtValueSummary.text = value
         summryRow.txtLableSummary.text = lable
-
         layout.addView(summryRow.root, layout.childCount)
 
     }
