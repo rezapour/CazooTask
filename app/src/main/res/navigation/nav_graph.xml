@@ -31,7 +31,7 @@
         <action
             android:id="@+id/action_splashScreanFragment_to_carListFragment"
             app:destination="@id/carListFragment"
-            app:launchSingleTop="false"
+            app:popUpTo="@id/splashScreanFragment"
             app:popUpToInclusive="true" />
     </fragment>
 </navigation>
