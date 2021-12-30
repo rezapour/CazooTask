@@ -1,4 +1,17 @@
 <resources>
     <string name="app_name">CazooTask</string>
     <string name="ListCarTitle">CarList</string>
+    <string name="VehicleDetail">Vehicle Detail</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="error_internet_connection">Please check your internet connection</string>
+    <string name="error_no_content">there are no content to show.</string>
+    <string name="summary">Summary</string>
+    <string name="features">Features</string>
+    <string name="weight_and_dimensions">Weight and dimensions</string>
+    <string name="performance_and_economy">Performance and economy</string>
+    <string name="specs">Specs</string>
+    <string name="interior">Interior</string>
+    <string name="exterior">Exterior</string>
+    <string name="running_costs">Running Costs</string>
 </resources>
