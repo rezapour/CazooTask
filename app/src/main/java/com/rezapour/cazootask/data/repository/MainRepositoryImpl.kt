@@ -26,7 +26,8 @@ class MainRepositoryImpl @Inject constructor(
                 emit(DataState.Error(Messages.Error.NO_CONTENT))
             }
         } catch (e: Exception) {
-            emit(DataState.Error(Messages.Error.INTERNET_CONNECTION_LIST))
+//            emit(DataState.Error(Messages.Error.INTERNET_CONNECTION_LIST))
+            emit(DataState.Error(e.message.toString()))
         }
     }
 

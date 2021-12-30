@@ -1,7 +1,6 @@
 package com.rezapour.cazootask.ui
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -13,7 +12,6 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-import com.rezapour.cazootask.R
 import com.rezapour.cazootask.databinding.FragmentCarListBinding
 import com.rezapour.cazootask.model.CarsListDetatil
 import com.rezapour.cazootask.ui.adapter.VehicleLIstAdapter
@@ -21,6 +19,9 @@ import com.rezapour.cazootask.util.DataState
 import com.rezapour.cazootask.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import androidx.recyclerview.widget.DividerItemDecoration
+import com.google.android.material.snackbar.Snackbar
+import com.rezapour.cazootask.R
+import com.rezapour.cazootask.assets.Messages
 
 
 @AndroidEntryPoint
@@ -40,8 +41,7 @@ class CarListFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentCarListBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -102,12 +102,18 @@ class CarListFragment : Fragment() {
 
     private fun errorRespond(message: String) {
         swiper.isRefreshing = false
-        Toast.makeText(
-            context,
-            "Error = ${message}",
-            Toast.LENGTH_SHORT
-        ).show()
 
+        when (message) {
+            Messages.Error.INTERNET_CONNECTION_LIST -> snackBar(getString(R.string.error_internet_connection))
+            Messages.Error.NO_CONTENT -> snackBar(getString(R.string.error_no_content))
+            else -> snackBar(message)
+
+        }
+
+    }
+
+    private fun snackBar(mes: String) {
+        Snackbar.make(binding.coordinatorListVehicle, mes, Snackbar.LENGTH_LONG).show();
     }
 
 }

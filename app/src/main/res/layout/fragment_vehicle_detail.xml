@@ -350,6 +350,7 @@
 
 
     <com.google.android.material.appbar.AppBarLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -360,6 +361,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/white"
             app:title="@string/VehicleDetail"
+            app:navigationIcon="@drawable/ic_left"
             app:titleTextColor="@color/black" />
 
 

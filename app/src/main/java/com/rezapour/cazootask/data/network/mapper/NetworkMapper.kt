@@ -14,11 +14,12 @@ class NetworkMapper @Inject constructor() : DataMapper<Result, CarsListDetatil> 
             modelYear = entity.modelYear,
             displayVarient = entity.displayVariant,
             mileage = entity.mileage,
+            mileageUnit = entity.odometerReading.unit,
             registrationYear = entity.registrationYear,
-            vrm = entity.vrm,
+            vrm = "ss",
             imageUrl = entity.images.main.url,
             price = entity.pricing.fullPrice.value,
-            pcp = entity.pricing.pcmPrice.pcp.value,
+            pcp = 0,
             currencyCode = entity.pricing.fullPrice.currencyCode
         )
     }

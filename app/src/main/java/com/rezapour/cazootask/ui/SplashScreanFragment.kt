@@ -32,6 +32,7 @@ class SplashScreanFragment : Fragment() {
         nextFragment()
     }
 
+    //todo
     private fun nextFragment() {
         Handler().postDelayed({
             navControler!!.navigate(R.id.action_splashScreanFragment_to_carListFragment)
