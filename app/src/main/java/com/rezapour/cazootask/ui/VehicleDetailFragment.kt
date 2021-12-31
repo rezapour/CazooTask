@@ -23,6 +23,7 @@ import android.widget.TextView
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.snackbar.Snackbar
 import com.rezapour.cazootask.data.network.model.vehicles.*
 
 
@@ -78,7 +79,7 @@ class VehicleDetailFragment : Fragment() {
         viewModel.dataState.observe(viewLifecycleOwner) { dataState ->
             when (dataState) {
                 is DataState.Success -> respondSuccess(dataState.data)
-                is DataState.Error -> Log.d("TAG", "Error=${dataState.message}")
+                is DataState.Error -> respondError(dataState.message)
                 is DataState.Loading -> Log.d("TAG", "Loading")
 
             }
@@ -107,6 +108,10 @@ class VehicleDetailFragment : Fragment() {
         layoutPerformance = binding.layoutPerformance
         layoutWeight = binding.layoutWeight
         layoutRunningCost = binding.layoutRunningCost
+    }
+
+    private fun respondError(message: String) {
+        snackBar(message)
     }
 
     private fun respondSuccess(vehicle: VehicleNetworkEntity) {
@@ -173,5 +178,9 @@ class VehicleDetailFragment : Fragment() {
         summryRow.txtLableSummary.text = lable
         layout.addView(summryRow.root, layout.childCount)
 
+    }
+
+    private fun snackBar(mes: String) {
+        Snackbar.make(binding.layoutVehicleDetail, mes, Snackbar.LENGTH_LONG).show();
     }
 }
