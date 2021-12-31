@@ -22,6 +22,9 @@
         <argument
             android:name="carId"
             app:argType="string" />
+        <action
+            android:id="@+id/action_vehicleDetailFragment_to_galleryFragment"
+            app:destination="@id/galleryFragment" />
     </fragment>
     <fragment
         android:id="@+id/splashScreanFragment"
@@ -33,5 +36,14 @@
             app:destination="@id/carListFragment"
             app:popUpTo="@id/splashScreanFragment"
             app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.rezapour.cazootask.ui.GalleryFragment"
+        android:label="fragment_gallery"
+        tools:layout="@layout/fragment_gallery">
+        <argument
+            android:name="imageList"
+            app:argType="string[]" />
     </fragment>
 </navigation>

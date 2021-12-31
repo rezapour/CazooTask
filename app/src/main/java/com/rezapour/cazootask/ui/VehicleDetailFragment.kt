@@ -1,6 +1,5 @@
 package com.rezapour.cazootask.ui
 
-import android.app.ActionBar
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -24,11 +23,12 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.snackbar.Snackbar
+import com.rezapour.cazootask.R
 import com.rezapour.cazootask.data.network.model.vehicles.*
 
 
 @AndroidEntryPoint
-class VehicleDetailFragment : Fragment() {
+class VehicleDetailFragment : Fragment(), View.OnClickListener {
 
     private val viewModel: VehicleDetatilViewModel by viewModels()
 
@@ -51,6 +51,10 @@ class VehicleDetailFragment : Fragment() {
     private lateinit var layoutPerformance: LinearLayout
     private lateinit var layoutWeight: LinearLayout
     private lateinit var layoutRunningCost: LinearLayout
+    private lateinit var btnGallery: Button
+    private lateinit var btnGallet360: Button
+    private lateinit var btnGalleryFallts: Button
+    private lateinit var respond: VehicleNetworkEntity
 
 
     override fun onCreateView(
@@ -108,6 +112,12 @@ class VehicleDetailFragment : Fragment() {
         layoutPerformance = binding.layoutPerformance
         layoutWeight = binding.layoutWeight
         layoutRunningCost = binding.layoutRunningCost
+        btnGallery = binding.btnGallery
+        btnGallery.setOnClickListener(this)
+        btnGallet360 = binding.btnGallery360
+        btnGallet360.setOnClickListener(this)
+        btnGalleryFallts = binding.btnFallts
+        btnGalleryFallts.setOnClickListener(this)
     }
 
     private fun respondError(message: String) {
@@ -115,6 +125,7 @@ class VehicleDetailFragment : Fragment() {
     }
 
     private fun respondSuccess(vehicle: VehicleNetworkEntity) {
+        respond = vehicle
         "${vehicle.make} ${vehicle.model}".also { txrVehicleName.text = it }
         textEngine.text = vehicle.displayVariant
         "${vehicle.mileage} ${vehicle.odometerReading.unit} ".also { txtMileAge.text = it }
@@ -182,5 +193,31 @@ class VehicleDetailFragment : Fragment() {
 
     private fun snackBar(mes: String) {
         Snackbar.make(binding.layoutVehicleDetail, mes, Snackbar.LENGTH_LONG).show();
+    }
+
+
+    private fun directToGallary(url: Array<String>) {
+        navControler!!.navigate(
+            VehicleDetailFragmentDirections.actionVehicleDetailFragmentToGalleryFragment(
+                url
+            )
+        )
+    }
+
+
+    private fun mapper(imagelist: List<ImageLinkNetWorkEntity>): Array<String> {
+        val array: Array<String> = Array<String>(imagelist.size) { "it = $it" }
+        for (i in imagelist.indices) {
+            array[i] = imagelist[i].medium
+        }
+        return array
+    }
+
+    override fun onClick(v: View?) {
+        when (v!!.id) {
+            R.id.btnGallery -> directToGallary(mapper(respond.imageGallery))
+            R.id.btnGallery360 -> directToGallary(mapper(respond.openDoors360))
+            R.id.btnFallts -> directToGallary(mapper(respond.openDoors360))//todo
+        }
     }
 }

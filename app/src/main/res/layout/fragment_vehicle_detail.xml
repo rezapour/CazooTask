@@ -42,18 +42,21 @@
                     android:orientation="horizontal">
 
                     <Button
+                        android:id="@+id/btnGallery"
                         style="@style/ButtonImage"
                         android:layout_gravity="start"
                         android:drawableTop="@drawable/ic_gallery"
                         android:text="Gallery" />
 
                     <Button
+                        android:id="@+id/btnGallery360"
                         style="@style/ButtonImage"
                         android:layout_gravity="center"
                         android:drawableTop="@drawable/ic_camera"
                         android:text="View 360" />
 
                     <Button
+                        android:id="@+id/btnFallts"
                         style="@style/ButtonImage"
                         android:layout_gravity="end"
                         android:drawableTop="@drawable/ic_warn"
