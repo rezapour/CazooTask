@@ -31,13 +31,16 @@ class VehicleLIstAdapter(
                 onClick(vehicle.id)
             }
 
-            txrVehicleName.text = "${vehicle.make} ${vehicle.model}"
+            "${vehicle.make} ${vehicle.model}".also { txrVehicleName.text = it }
             textEngine.text = vehicle.displayVarient
-            txtMileAge.text = "${vehicle.mileage} ${vehicle.mileageUnit} "
-            txtRegyear.text = "${vehicle.registrationYear} reg"
-//            txtPcp.text = vehicle.pcp.toString()
-            txtPrice.text =
-                " ${Currency.getInstance(vehicle.currencyCode).symbol}${vehicle.price.toString()}"
+            "${vehicle.mileage} ${vehicle.mileageUnit} ".also { txtMileAge.text = it }
+            "${vehicle.registrationYear} reg".also { txtRegyear.text = it }
+            vehicle.pcp.toString().let {
+                txtPcp.text = "${Currency.getInstance(vehicle.currencyCode).symbol}$it/month PCP"
+            }
+            " ${Currency.getInstance(vehicle.currencyCode).symbol}${vehicle.price.toString()}".also {
+                txtPrice.text = it
+            }
             Glide.with(itemView.context).load(vehicle.imageUrl)
                 .into(imageViewVehicle)
 

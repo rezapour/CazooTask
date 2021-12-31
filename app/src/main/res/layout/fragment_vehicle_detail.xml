@@ -32,8 +32,7 @@
                     android:id="@+id/ivVehicelPic"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/carpic" />
+                    android:scaleType="centerCrop" />
 
                 <androidx.coordinatorlayout.widget.CoordinatorLayout
                     android:layout_width="match_parent"
@@ -100,7 +99,6 @@
                         android:layout_marginBottom="2dp"
                         android:background="@color/grey2"
                         android:fontFamily="@font/saira"
-                        android:text="42,109 miles"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
 
@@ -137,7 +135,6 @@
                         android:layout_marginBottom="2dp"
                         android:background="@android:color/transparent"
                         android:fontFamily="@font/saira"
-                        android:text="2016 reg"
                         android:textColor="@color/grey"
                         android:textSize="16sp" />
 
@@ -149,7 +146,6 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/saira"
-                    android:text="Audi A3"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -165,7 +161,6 @@
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/saira"
                     android:maxLines="1"
-                    android:text="1.6L SE Technik TDI"
                     android:textColor="@color/grey"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -178,7 +173,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/saira"
-                    android:text="$5,600"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="18sp"
@@ -192,7 +186,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/saira"
-                    android:text="$95/month PCP"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="18sp"
@@ -371,6 +364,19 @@
 
 
     </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/layoutLoading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

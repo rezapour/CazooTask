@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white">
-    <!--todo delete data-->
     <ImageView
         android:id="@+id/ivVehicleImage"
         android:layout_width="0dp"
@@ -15,7 +14,6 @@
         android:layout_marginTop="30dp"
         android:foregroundGravity="fill_vertical"
         android:scaleType="centerCrop"
-        android:src="@drawable/carpic"
         app:layout_constraintEnd_toEndOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -51,7 +49,6 @@
             android:layout_marginBottom="2dp"
             android:background="@color/grey2"
             android:fontFamily="@font/saira"
-            android:text="42,109 miles"
             android:textColor="@color/black"
             android:textSize="12sp" />
 
@@ -88,7 +85,6 @@
             android:layout_marginBottom="2dp"
             android:background="@android:color/transparent"
             android:fontFamily="@font/saira"
-            android:text="2016 reg"
             android:textColor="@color/grey"
             android:textSize="12sp" />
 
@@ -101,7 +97,6 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/saira"
-        android:text="Audi A3"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -117,7 +112,6 @@
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/saira"
         android:maxLines="1"
-        android:text="1.6L SE Technik TDI"
         android:textColor="@color/grey"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -132,7 +126,6 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:fontFamily="@font/saira"
-        android:text="$95/month PCP"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="16sp"
@@ -152,7 +145,6 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:fontFamily="@font/saira"
-        android:text="$5,600"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="16sp"

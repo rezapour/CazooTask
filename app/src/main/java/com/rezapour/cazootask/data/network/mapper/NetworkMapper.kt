@@ -7,6 +7,8 @@ import javax.inject.Inject
 
 class NetworkMapper @Inject constructor() : DataMapper<Result, CarsListDetatil> {
     override fun mapFromEntity(entity: Result): CarsListDetatil {
+        var pcp: Long?
+        entity.pricing.pcmPrice.pcp?.value.let { pcp = it }
         return CarsListDetatil(
             id = entity.id,
             make = entity.make,
@@ -16,12 +18,12 @@ class NetworkMapper @Inject constructor() : DataMapper<Result, CarsListDetatil> 
             mileage = entity.mileage,
             mileageUnit = entity.odometerReading.unit,
             registrationYear = entity.registrationYear,
-            vrm = "ss",
             imageUrl = entity.images.main.url,
             price = entity.pricing.fullPrice.value,
-            pcp = 0,
+            pcp = pcp,
             currencyCode = entity.pricing.fullPrice.currencyCode
         )
+
     }
 
 

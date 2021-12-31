@@ -19,8 +19,10 @@ import java.util.*
 import android.widget.LinearLayout
 
 import android.widget.TextView
+import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.snackbar.Snackbar
 import com.rezapour.cazootask.R
@@ -55,6 +57,7 @@ class VehicleDetailFragment : Fragment(), View.OnClickListener {
     private lateinit var btnGallet360: Button
     private lateinit var btnGalleryFallts: Button
     private lateinit var respond: VehicleNetworkEntity
+    private lateinit var loading: CoordinatorLayout
 
 
     override fun onCreateView(
@@ -84,7 +87,7 @@ class VehicleDetailFragment : Fragment(), View.OnClickListener {
             when (dataState) {
                 is DataState.Success -> respondSuccess(dataState.data)
                 is DataState.Error -> respondError(dataState.message)
-                is DataState.Loading -> Log.d("TAG", "Loading")
+                is DataState.Loading -> loading(true)
 
             }
 
@@ -118,29 +121,49 @@ class VehicleDetailFragment : Fragment(), View.OnClickListener {
         btnGallet360.setOnClickListener(this)
         btnGalleryFallts = binding.btnFallts
         btnGalleryFallts.setOnClickListener(this)
+        loading = binding.layoutLoading
+        loading.setOnClickListener(this)
     }
 
     private fun respondError(message: String) {
+        loading(false)
         snackBar(message)
     }
 
     private fun respondSuccess(vehicle: VehicleNetworkEntity) {
+        loading(false)
         respond = vehicle
         "${vehicle.make} ${vehicle.model}".also { txrVehicleName.text = it }
         textEngine.text = vehicle.displayVariant
         "${vehicle.mileage} ${vehicle.odometerReading.unit} ".also { txtMileAge.text = it }
         "${vehicle.registrationYear} reg".also { txtRegyear.text = it }
-//            txtPcp.text = vehicle.pcp.toString()
+
+        vehicle.pricing.pcmPrice.pcp?.value.toString().let {
+            "${Currency.getInstance(vehicle.pricing.pcmPrice.pcp?.currencyCode).symbol}$it/month PCP".also {
+                txtPcp.text = it
+            }
+        }
         " ${Currency.getInstance(vehicle.pricing.fullPrice.currencyCode).symbol}${vehicle.pricing.fullPrice.value.toString()}".also {
             txtPrice.text = it
         }
-        Glide.with(context!!).load(vehicle.images.main.url)
-            .into(imageViewVehicle)
 
+
+
+        setImage()
         addSummary(vehicle.summaryAttributes)
         addFeature(vehicle.verifiedFeatures)
         addSpaces(vehicle.manufacturerSpecs)
         addRunningCost(vehicle.runningCosts)
+    }
+
+    private fun setImage() {
+        val circularProgressDrawable = CircularProgressDrawable(context!!)
+        circularProgressDrawable.strokeWidth = 5f
+        circularProgressDrawable.centerRadius = 30f
+        circularProgressDrawable.start()
+        Glide.with(context!!).load(respond.images.main.url)
+            .placeholder(circularProgressDrawable)
+            .into(imageViewVehicle)
     }
 
 
@@ -195,6 +218,10 @@ class VehicleDetailFragment : Fragment(), View.OnClickListener {
         Snackbar.make(binding.layoutVehicleDetail, mes, Snackbar.LENGTH_LONG).show();
     }
 
+
+    private fun loading(isShow: Boolean) {
+        loading.visibility = if (isShow) View.VISIBLE else View.INVISIBLE
+    }
 
     private fun directToGallary(url: Array<String>) {
         navControler!!.navigate(
