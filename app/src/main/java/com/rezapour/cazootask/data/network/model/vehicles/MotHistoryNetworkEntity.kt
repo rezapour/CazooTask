@@ -8,10 +8,7 @@ data class MotHistoryNetworkEntity(
     @Expose @SerializedName("testDate") val testDate: String,
     @Expose @SerializedName("expiryDate") val expiryDate: String,
     @Expose @SerializedName("hasPassed") val hasPassed: Boolean,
-    @Expose @SerializedName("mileage") val mileage: Long,
-    @Expose @SerializedName("failures") val failures: String?, //todo what is type
-    @Expose @SerializedName("advisories") val advisories: String?, // todo what is type
-    @Expose @SerializedName("minors") val minors: String? //todo what is type
+    @Expose @SerializedName("mileage") val mileage: Long
 )
 
 

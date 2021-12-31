@@ -9,7 +9,6 @@ data class VehicleNetworkEntity(
     @Expose @SerializedName("state") val state: String,
     @Expose @SerializedName("makeIdentifier") val makeIdentifier: String,
     @Expose @SerializedName("modelIdentifier") val modelIdentifier: String,
-    @Expose @SerializedName("manufacturerFeatures") val manufacturerFeatures: List<String>,//Todo What is the Type?
     @Expose @SerializedName("manufacturerSpecs") val manufacturerSpecs: List<ManufacturerSpecsNetWorkEntity>,
     @Expose @SerializedName("verifiedFeatures") val verifiedFeatures: List<VerifiedFeaturesNetWorkEntity>,
     @Expose @SerializedName("summaryAttributes") val summaryAttributes: List<DisplayValueNetworkEntity>,
@@ -19,8 +18,8 @@ data class VehicleNetworkEntity(
     @Expose @SerializedName("imageGallery") val imageGallery: List<ImageLinkNetWorkEntity>,
     @Expose @SerializedName("featuresGallery") val featuresGallery: List<FeaturesGalleryNetWorkEntity>,
     @Expose @SerializedName("imperfectionsGallery") val valimperfectionsGallery: List<FeaturesGalleryNetWorkEntity>,
-    @Expose @SerializedName("closeDoors360") val closeDoors360: List<Image360UrlNetworkEntity>,
-    @Expose @SerializedName("openDoors360") val openDoors360: List<Image360UrlNetworkEntity>,
+    @Expose @SerializedName("closeDoors360") val closeDoors360: List<ImageLinkNetWorkEntity>,
+    @Expose @SerializedName("openDoors360") val openDoors360: List<ImageLinkNetWorkEntity>,
     @Expose @SerializedName("internal360") val internal360: String,
     @Expose @SerializedName("serviceHistoryDocumentationFound") val serviceHistoryDocumentationFound: Boolean,
     @Expose @SerializedName("serviceHistory") val serviceHistory: List<ServiceHistoryNetworkEntity>,
