@@ -195,6 +195,11 @@
                     app:layout_constraintTop_toTopOf="@+id/txtPriceDetail" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
 
             <LinearLayout
                 android:id="@+id/layoutFeatures"
@@ -317,12 +322,6 @@
 
 
             </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:layout_marginTop="8dp"
-                android:background="@color/black" />
 
 
             <LinearLayout
