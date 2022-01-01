@@ -9,9 +9,13 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.view.drawToBitmap
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
+import com.google.android.material.appbar.MaterialToolbar
 import com.rezapour.cazootask.R
 import com.rezapour.cazootask.databinding.FragmentGalleryBinding
 
@@ -20,6 +24,8 @@ class GalleryFragment : Fragment(), View.OnClickListener {
 
     private var _binding: FragmentGalleryBinding? = null
     private val binding get() = _binding!!
+    private var navControler: NavController? = null
+
     private lateinit var imageView: ImageView
     private lateinit var btnBack: ImageButton
     private lateinit var btnForward: ImageButton
@@ -27,6 +33,7 @@ class GalleryFragment : Fragment(), View.OnClickListener {
     private val args: GalleryFragmentArgs by navArgs()
     private lateinit var imageList: Array<String>
     private lateinit var imageNumber: TextView
+    private lateinit var actionBar: MaterialToolbar
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,6 +45,7 @@ class GalleryFragment : Fragment(), View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        navControler = Navigation.findNavController(view)
         imageList = args.imageList
         initUi()
     }
@@ -55,6 +63,10 @@ class GalleryFragment : Fragment(), View.OnClickListener {
         btnForward = binding.btnForward
         btnForward.setOnClickListener(this)
         imageNumber = binding.txtNumber
+        actionBar = binding.topAppBarGallery
+        actionBar.setNavigationOnClickListener {
+            navControler!!.navigateUp()
+        }
         loadPicture()
 
 
