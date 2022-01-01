@@ -7,7 +7,7 @@ import retrofit2.http.Path
 
 interface ApiProvider {
 
-    suspend fun getCarList(): Response<CarListNetworkEntity>
+    suspend fun getCarList(page: Int): Response<CarListNetworkEntity>
 
 
     suspend fun getVehicleDetail(id: String): Response<VehicleNetworkEntity>

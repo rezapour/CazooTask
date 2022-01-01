@@ -1,11 +1,11 @@
 package com.rezapour.cazootask.ui
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.rezapour.cazootask.databinding.FragmentCarListBinding
-import com.rezapour.cazootask.model.CarsListDetatil
+import com.rezapour.cazootask.model.VehicleListDetatil
 import com.rezapour.cazootask.ui.adapter.VehicleLIstAdapter
 import com.rezapour.cazootask.util.DataState
 import com.rezapour.cazootask.viewmodel.MainViewModel
@@ -53,20 +53,22 @@ class CarListFragment : Fragment() {
     private fun setUp() {
         initUI()
         subscribeToViewModel()
-        viewModel.getCarsList()
+        viewModel.getCarsData()
 
     }
 
     private fun initUI() {
         recyclerView = binding.ListCarsRecyclerView
-        adapter = VehicleLIstAdapter(ArrayList<CarsListDetatil>()) { id ->
+        adapter = VehicleLIstAdapter(ArrayList<VehicleListDetatil>(), { id ->
 
             navController!!.navigate(
                 CarListFragmentDirections.actionCarListFragmentToVehicleDetailFragment(
                     id
                 )
             )
-        }
+        }, {
+            viewModel.getCarsPagination()
+        })
         recyclerView.adapter = adapter
 
         val layoutManger = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
@@ -78,7 +80,7 @@ class CarListFragment : Fragment() {
 
         swiper = binding.swiperLayout
         swiper.setOnRefreshListener {
-            viewModel.getCarsList()
+            viewModel.getCarsData()
         }
 
     }
@@ -94,7 +96,7 @@ class CarListFragment : Fragment() {
         }
     }
 
-    private fun successRespond(item: List<CarsListDetatil>) {
+    private fun successRespond(item: List<VehicleListDetatil>) {
         loading(false)
         adapter.addItem(item)
         adapter.notifyDataSetChanged()
@@ -102,7 +104,7 @@ class CarListFragment : Fragment() {
 
     private fun errorRespond(message: String) {
         loading(false)
-
+        Log.d("Tag", message)
         when (message) {
             Messages.Error.INTERNET_CONNECTION_LIST -> snackBar(getString(R.string.error_internet_connection))
             Messages.Error.NO_CONTENT -> snackBar(getString(R.string.error_no_content))

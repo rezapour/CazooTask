@@ -4,7 +4,7 @@ import com.rezapour.cazootask.assets.Messages
 import com.rezapour.cazootask.data.network.ApiProvider
 import com.rezapour.cazootask.data.network.mapper.NetworkMapper
 import com.rezapour.cazootask.data.network.model.vehicles.VehicleNetworkEntity
-import com.rezapour.cazootask.model.CarsListDetatil
+import com.rezapour.cazootask.model.VehicleListDetatil
 import com.rezapour.cazootask.util.DataState
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -16,9 +16,9 @@ class MainRepositoryImpl @Inject constructor(
     private val netWorkMapper: NetworkMapper
 ) :
     MainRepository {
-    override suspend fun getCarList(): Flow<DataState<List<CarsListDetatil>>> = flow {
+    override suspend fun getCarList(page: Int): Flow<DataState<List<VehicleListDetatil>>> = flow {
         try {
-            val response = apiProvider.getCarList()
+            val response = apiProvider.getCarList(page)
             if (response.isSuccessful && response.body() != null) {
                 val cars = netWorkMapper.mapFromEntityList(response.body()!!.results)
                 emit(DataState.Success(cars))

@@ -6,11 +6,12 @@ import com.rezapour.cazootask.data.network.model.vehicles.VehicleNetworkEntity
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface ApiService {
 
     @GET(Constants.SUB_DOMAIN_SEARCH)
-    suspend fun getCarList(): Response<CarListNetworkEntity>
+    suspend fun getCarList(@Query("page") page: Int): Response<CarListNetworkEntity>
 
     @GET(Constants.SUB_DOMAIN_VEHICLE)
     suspend fun getVehicleDetail(@Path("id") id: String): Response<VehicleNetworkEntity>

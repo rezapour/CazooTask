@@ -1,6 +1,6 @@
 package com.rezapour.cazootask.model
 
-data class CarsListDetatil(
+data class VehicleListDetatil(
     var id: String,
     var make: String,
     var model: String,

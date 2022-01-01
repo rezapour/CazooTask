@@ -8,8 +8,8 @@ import retrofit2.Response
 import javax.inject.Inject
 
 class ApiProviderImpl @Inject constructor(private val apiService: ApiService) : ApiProvider {
-    override suspend fun getCarList(): Response<CarListNetworkEntity> {
-        return apiService.getCarList()
+    override suspend fun getCarList(page: Int): Response<CarListNetworkEntity> {
+        return apiService.getCarList(page)
     }
 
     override suspend fun getVehicleDetail(id: String): Response<VehicleNetworkEntity> {

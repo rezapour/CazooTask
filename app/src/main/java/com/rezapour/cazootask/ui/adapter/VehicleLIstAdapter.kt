@@ -7,13 +7,14 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.rezapour.cazootask.databinding.VehicleRowBinding
-import com.rezapour.cazootask.model.CarsListDetatil
+import com.rezapour.cazootask.model.VehicleListDetatil
 import java.util.*
 import kotlin.collections.ArrayList
 
 class VehicleLIstAdapter(
-    private val vehicleList: ArrayList<CarsListDetatil>,
-    val onClick: (String) -> Unit
+    private val vehicleList: ArrayList<VehicleListDetatil>,
+    val onClick: (String) -> Unit,
+    val onButtomRiched: () -> Unit,
 ) :
     RecyclerView.Adapter<VehicleLIstAdapter.VehicleViewHolder>() {
 
@@ -26,7 +27,7 @@ class VehicleLIstAdapter(
         val txtPcp: TextView = binding.txtPcp
         val txtPrice: TextView = binding.txtPrice
         val imageViewVehicle: ImageView = binding.ivVehicleImage
-        fun bindItem(vehicle: CarsListDetatil) {
+        fun bindItem(vehicle: VehicleListDetatil) {
             binding.rowLayout.setOnClickListener {
                 onClick(vehicle.id)
             }
@@ -54,15 +55,17 @@ class VehicleLIstAdapter(
 
     override fun onBindViewHolder(holder: VehicleViewHolder, position: Int) {
         val vehicle = vehicleList.get(position)
-
         holder.bindItem(vehicle)
+        if (position == vehicleList.size - 1)
+            onButtomRiched()
     }
 
     override fun getItemCount(): Int {
         return vehicleList.size
     }
 
-    fun addItem(items: List<CarsListDetatil>) {
+    fun addItem(items: List<VehicleListDetatil>) {
+        vehicleList.clear()
         vehicleList.addAll(items)
     }
 
