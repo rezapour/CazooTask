@@ -251,6 +251,7 @@ class VehicleDetailFragment : Fragment(), View.OnClickListener {
     private fun snackBar(mes: String) {
         Snackbar.make(binding.layoutVehicleDetail, mes, Snackbar.LENGTH_LONG).show();
     }
+
     private fun directToGallary(url: Array<String>) {
         navControler!!.navigate(
             VehicleDetailFragmentDirections.actionVehicleDetailFragmentToGalleryFragment(
@@ -260,19 +261,14 @@ class VehicleDetailFragment : Fragment(), View.OnClickListener {
     }
 
 
-    private fun mapper(imagelist: List<ImageLinkNetWorkEntity>): Array<String> {
-        val array: Array<String> = Array<String>(imagelist.size) { "it = $it" }
-        for (i in imagelist.indices) {
-            array[i] = imagelist[i].medium
-        }
-        return array
-    }
-
     override fun onClick(v: View?) {
         when (v!!.id) {
-            R.id.btnGallery -> directToGallary(mapper(respond.imageGallery))
-            R.id.btnGallery360 -> directToGallary(mapper(respond.openDoors360))
-            R.id.btnFallts -> directToGallary(mapper(respond.openDoors360))//todo
+            R.id.btnGallery -> directToGallary(respond.imageGallery.map { data -> data.medium }
+                .toTypedArray())
+            R.id.btnGallery360 -> directToGallary(respond.openDoors360.map { data -> data.medium }
+                .toTypedArray())
+            R.id.btnFallts -> directToGallary(respond.imperfectionsGallery.map { data -> data.image.medium }
+                .toTypedArray())
         }
     }
 }
