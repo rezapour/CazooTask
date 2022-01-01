@@ -88,20 +88,20 @@ class CarListFragment : Fragment() {
             when (dataState) {
                 is DataState.Success -> successRespond(dataState.data)
                 is DataState.Error -> errorRespond(dataState.message)
-                is DataState.Loading -> swiper.isRefreshing = true
+                is DataState.Loading -> loading(true)
             }
 
         }
     }
 
     private fun successRespond(item: List<CarsListDetatil>) {
-        swiper.isRefreshing = false
+        loading(false)
         adapter.addItem(item)
         adapter.notifyDataSetChanged()
     }
 
     private fun errorRespond(message: String) {
-        swiper.isRefreshing = false
+        loading(false)
 
         when (message) {
             Messages.Error.INTERNET_CONNECTION_LIST -> snackBar(getString(R.string.error_internet_connection))
@@ -114,6 +114,10 @@ class CarListFragment : Fragment() {
 
     private fun snackBar(mes: String) {
         Snackbar.make(binding.coordinatorListVehicle, mes, Snackbar.LENGTH_LONG).show();
+    }
+
+    private fun loading(isShow: Boolean) {
+        swiper.isRefreshing = isShow
     }
 
 }

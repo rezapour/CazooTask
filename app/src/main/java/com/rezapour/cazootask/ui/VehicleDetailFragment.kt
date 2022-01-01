@@ -23,9 +23,11 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.snackbar.Snackbar
 import com.rezapour.cazootask.R
+import com.rezapour.cazootask.assets.Messages
 import com.rezapour.cazootask.data.network.model.vehicles.*
 
 
@@ -58,6 +60,8 @@ class VehicleDetailFragment : Fragment(), View.OnClickListener {
     private lateinit var btnGalleryFallts: Button
     private lateinit var respond: VehicleNetworkEntity
     private lateinit var loading: CoordinatorLayout
+    lateinit var swiper: SwipeRefreshLayout
+    lateinit var vehicleId: String
 
 
     override fun onCreateView(
@@ -72,14 +76,14 @@ class VehicleDetailFragment : Fragment(), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navControler = Navigation.findNavController(view)
-        val id = args.carId
-        setUp(id)
+        vehicleId = args.carId
+        setUp()
     }
 
-    private fun setUp(VehicleId: String) {
+    private fun setUp() {
         setUpUi()
         subscribeToViewModel()
-        viewModel.getVehicleDetail(VehicleId)
+        viewModel.getVehicleDetail(vehicleId)
     }
 
     private fun subscribeToViewModel() {
@@ -123,11 +127,19 @@ class VehicleDetailFragment : Fragment(), View.OnClickListener {
         btnGalleryFallts.setOnClickListener(this)
         loading = binding.layoutLoading
         loading.setOnClickListener(this)
+        swiper = binding.swiperDetailLayout
+        swiper.setOnRefreshListener {
+            viewModel.getVehicleDetail(vehicleId)
+        }
     }
 
     private fun respondError(message: String) {
         loading(false)
-        snackBar(message)
+        when (message) {
+            Messages.Error.INTERNET_CONNECTION_LIST -> snackBar(getString(R.string.error_internet_connection))
+            Messages.Error.NO_CONTENT -> snackBar(getString(R.string.error_no_content))
+            else -> snackBar(message)
+        }
     }
 
     private fun respondSuccess(vehicle: VehicleNetworkEntity) {
@@ -221,6 +233,8 @@ class VehicleDetailFragment : Fragment(), View.OnClickListener {
 
     private fun loading(isShow: Boolean) {
         loading.visibility = if (isShow) View.VISIBLE else View.INVISIBLE
+        swiper.isRefreshing = isShow
+
     }
 
     private fun directToGallary(url: Array<String>) {
