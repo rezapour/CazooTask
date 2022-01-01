@@ -59,7 +59,6 @@ class VehicleDetailFragment : Fragment(), View.OnClickListener {
     private lateinit var btnGallet360: Button
     private lateinit var btnGalleryFallts: Button
     private lateinit var respond: VehicleNetworkEntity
-    private lateinit var loading: CoordinatorLayout
     lateinit var swiper: SwipeRefreshLayout
     lateinit var vehicleId: String
 
@@ -91,8 +90,7 @@ class VehicleDetailFragment : Fragment(), View.OnClickListener {
             when (dataState) {
                 is DataState.Success -> respondSuccess(dataState.data)
                 is DataState.Error -> respondError(dataState.message)
-                is DataState.Loading -> loading(true)
-
+                is DataState.Loading -> uiStateBasedOnRespond("loading")
             }
 
         }
@@ -125,16 +123,40 @@ class VehicleDetailFragment : Fragment(), View.OnClickListener {
         btnGallet360.setOnClickListener(this)
         btnGalleryFallts = binding.btnFallts
         btnGalleryFallts.setOnClickListener(this)
-        loading = binding.layoutLoading
-        loading.setOnClickListener(this)
         swiper = binding.swiperDetailLayout
         swiper.setOnRefreshListener {
             viewModel.getVehicleDetail(vehicleId)
         }
     }
 
+
+    private fun uiStateBasedOnRespond(state: String) {
+        when (state) {
+            "loading" -> {
+                swiper.isRefreshing = true
+                buttonState(false)
+            }
+            "error" -> {
+                swiper.isRefreshing = false
+                swiper.isEnabled = true
+                buttonState(false)
+            }
+            "success" -> {
+                swiper.isRefreshing = false
+                swiper.isEnabled = false
+                buttonState(true)
+            }
+        }
+    }
+
+    fun buttonState(isEnable: Boolean) {
+        btnGallery.isEnabled = isEnable
+        btnGallet360.isEnabled = isEnable
+        btnGalleryFallts.isEnabled = isEnable
+    }
+
     private fun respondError(message: String) {
-        loading(false)
+        uiStateBasedOnRespond("error")
         when (message) {
             Messages.Error.INTERNET_CONNECTION_LIST -> snackBar(getString(R.string.error_internet_connection))
             Messages.Error.NO_CONTENT -> snackBar(getString(R.string.error_no_content))
@@ -143,7 +165,7 @@ class VehicleDetailFragment : Fragment(), View.OnClickListener {
     }
 
     private fun respondSuccess(vehicle: VehicleNetworkEntity) {
-        loading(false)
+        uiStateBasedOnRespond("success")
         respond = vehicle
         "${vehicle.make} ${vehicle.model}".also { txrVehicleName.text = it }
         textEngine.text = vehicle.displayVariant
@@ -229,14 +251,6 @@ class VehicleDetailFragment : Fragment(), View.OnClickListener {
     private fun snackBar(mes: String) {
         Snackbar.make(binding.layoutVehicleDetail, mes, Snackbar.LENGTH_LONG).show();
     }
-
-
-    private fun loading(isShow: Boolean) {
-        loading.visibility = if (isShow) View.VISIBLE else View.INVISIBLE
-        swiper.isRefreshing = isShow
-
-    }
-
     private fun directToGallary(url: Array<String>) {
         navControler!!.navigate(
             VehicleDetailFragmentDirections.actionVehicleDetailFragmentToGalleryFragment(

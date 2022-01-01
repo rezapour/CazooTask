@@ -14,4 +14,5 @@
     <string name="interior">Interior</string>
     <string name="exterior">Exterior</string>
     <string name="running_costs">Running Costs</string>
+    <string name="gallery">Gallery</string>
 </resources>
