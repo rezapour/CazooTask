@@ -172,8 +172,8 @@ class VehicleDetailFragment : Fragment(), View.OnClickListener {
         "${vehicle.mileage} ${vehicle.odometerReading.unit} ".also { txtMileAge.text = it }
         "${vehicle.registrationYear} reg".also { txtRegyear.text = it }
 
-        vehicle.pricing.pcmPrice.pcp?.value.toString().let {
-            "${Currency.getInstance(vehicle.pricing.pcmPrice.pcp?.currencyCode).symbol}$it/month PCP".also {
+        vehicle.pricing.pcmPrice?.pcp?.value.toString().let {
+            "${Currency.getInstance(vehicle.pricing.pcmPrice?.pcp?.currencyCode).symbol}$it/month PCP".also {
                 txtPcp.text = it
             }
         }
