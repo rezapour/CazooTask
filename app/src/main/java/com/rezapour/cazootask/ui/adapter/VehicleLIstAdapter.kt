@@ -37,7 +37,11 @@ class VehicleLIstAdapter(
             "${vehicle.mileage} ${vehicle.mileageUnit} ".also { txtMileAge.text = it }
             "${vehicle.registrationYear} reg".also { txtRegyear.text = it }
             vehicle.pcp.toString().let {
-                txtPcp.text = "${Currency.getInstance(vehicle.currencyCode).symbol}$it/month PCP"
+                if (it == "0")
+                    "Not available".also { txtPcp.text = it }
+                "${Currency.getInstance(vehicle.currencyCode).symbol}$it/month PCP".also {
+                    txtPcp.text = it
+                }
             }
             " ${Currency.getInstance(vehicle.currencyCode).symbol}${vehicle.price.toString()}".also {
                 txtPrice.text = it

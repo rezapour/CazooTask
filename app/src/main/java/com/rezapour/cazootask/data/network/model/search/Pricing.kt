@@ -6,5 +6,5 @@ import com.google.gson.annotations.SerializedName
 
 data class Pricing(
     @Expose @SerializedName("fullPrice") val fullPrice: PriceModelNetworkEntity,
-    @Expose @SerializedName("pcmPrice") val pcmPrice: PcmPrice
+    @Expose @SerializedName("pcmPrice") val pcmPrice: PcmPrice?
 )

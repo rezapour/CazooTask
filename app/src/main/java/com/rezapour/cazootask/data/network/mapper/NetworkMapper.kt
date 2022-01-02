@@ -1,15 +1,17 @@
 package com.rezapour.cazootask.data.network.mapper
 
 import com.rezapour.cazootask.data.network.model.search.Result
-import com.rezapour.cazootask.model.CarsListDetatil
+import com.rezapour.cazootask.model.VehicleListDetatil
 import com.rezapour.cazootask.util.DataMapper
+import java.util.*
 import javax.inject.Inject
 
-class NetworkMapper @Inject constructor() : DataMapper<Result, CarsListDetatil> {
-    override fun mapFromEntity(entity: Result): CarsListDetatil {
-        var pcp: Long?
-        entity.pricing.pcmPrice.pcp?.value.let { pcp = it }
-        return CarsListDetatil(
+class NetworkMapper @Inject constructor() : DataMapper<Result, VehicleListDetatil> {
+    override fun mapFromEntity(entity: Result): VehicleListDetatil {
+        var pcp: Long? = 0
+        if (entity.pricing.pcmPrice != null)
+            entity.pricing.pcmPrice.let { it.pcp?.let { pcp = it.value } }
+        return VehicleListDetatil(
             id = entity.id,
             make = entity.make,
             model = entity.model,
@@ -27,7 +29,7 @@ class NetworkMapper @Inject constructor() : DataMapper<Result, CarsListDetatil> 
     }
 
 
-    fun mapFromEntityList(entityList: List<Result>): List<CarsListDetatil> {
+    fun mapFromEntityList(entityList: List<Result>): List<VehicleListDetatil> {
         return entityList.map { mapFromEntity(it) }
     }
 }

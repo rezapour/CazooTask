@@ -42,7 +42,7 @@ class MainRepositoryImplTest {
         respondBody = inputStream.bufferedReader().use { it.readText() }
 
         val inputStreamVehicleDetile: InputStream =
-            File(getResource("searchApiRespond.json").toURI()).inputStream()
+            File(getResource("vehicleDetilsRespond.json").toURI()).inputStream()
         respondBodyVehicleDetile = inputStreamVehicleDetile.bufferedReader().use { it.readText() }
 
     }
@@ -60,7 +60,7 @@ class MainRepositoryImplTest {
         mockWebServer.enqueue(mock)
 
         runBlocking {
-            repository.getCarList().test {
+            repository.getCarList(1).test {
                 assertThat(awaitItem()).isInstanceOf(DataState.Success::class.java)
                 awaitComplete()
             }
@@ -75,8 +75,9 @@ class MainRepositoryImplTest {
         mockWebServer.enqueue(mock)
 
         runBlocking {
-            repository.getCarList().test {
+            repository.getCarList(1).test {
                 assertThat(awaitItem()).isInstanceOf(DataState.Error::class.java)
+
                 awaitComplete()
             }
         }

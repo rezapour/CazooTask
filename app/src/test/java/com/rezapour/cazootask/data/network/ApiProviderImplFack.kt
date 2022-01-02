@@ -12,8 +12,8 @@ import java.util.concurrent.TimeUnit
 
 class ApiProviderImplFack constructor(val apiService: ApiService) : ApiProvider {
 
-    override suspend fun getCarList(): Response<CarListNetworkEntity> {
-        return apiService.getCarList()
+    override suspend fun getCarList(page: Int): Response<CarListNetworkEntity> {
+        return apiService.getCarList(page)
     }
 
     override suspend fun getVehicleDetail(id: String): Response<VehicleNetworkEntity> {

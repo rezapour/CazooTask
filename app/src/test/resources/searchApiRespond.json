@@ -91,11 +91,6 @@
           "value": 13100
         },
         "pcmPrice": {
-          "pcp": {
-            "centAmount": 22434,
-            "currencyCode": "GBP",
-            "value": 224
-          },
           "hp": {
             "centAmount": 29847,
             "currencyCode": "GBP",

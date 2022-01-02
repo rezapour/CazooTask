@@ -44,9 +44,10 @@ class MainViewModel @Inject constructor(
                     vehicleList.addAll(dataState.data)
                     _dataStateListOfCars.postValue(DataState.Success(vehicleList))
                 } else {
-                    if (page > 1)
+                    if (page > 1) {
                         page--
-                    _dataStateListOfCars.postValue(dataState)
+                        _dataStateListOfCars.postValue(dataState)
+                    }
                 }
             }
         }
