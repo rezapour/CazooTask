@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/layoutVehicleDetail"
-    tools:context=".ui.VehicleDetailFragment">
+    tools:context=".view.vehicledetail.VehicleDetailFragment">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swiperDetailLayout"

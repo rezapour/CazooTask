@@ -1,7 +1,6 @@
-package com.rezapour.cazootask.ui
+package com.rezapour.cazootask.view.vehicledetail
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -13,13 +12,11 @@ import com.bumptech.glide.Glide
 import com.rezapour.cazootask.databinding.FragmentVehicleDetailBinding
 import com.rezapour.cazootask.databinding.SummaryRowBinding
 import com.rezapour.cazootask.util.DataState
-import com.rezapour.cazootask.viewmodel.VehicleDetatilViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.*
 import android.widget.LinearLayout
 
 import android.widget.TextView
-import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable

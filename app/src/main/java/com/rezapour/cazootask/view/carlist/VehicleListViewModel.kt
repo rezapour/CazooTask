@@ -1,4 +1,4 @@
-package com.rezapour.cazootask.viewmodel
+package com.rezapour.cazootask.view.carlist
 
 import androidx.lifecycle.*
 import com.rezapour.cazootask.data.repository.MainRepository
@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class MainViewModel @Inject constructor(
+class VehicleListViewModel @Inject constructor(
     private val savedStateHandle: SavedStateHandle,
     private val mainRepository: MainRepository
 ) : ViewModel() {

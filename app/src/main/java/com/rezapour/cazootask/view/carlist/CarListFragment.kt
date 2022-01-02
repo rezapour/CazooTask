@@ -1,4 +1,4 @@
-package com.rezapour.cazootask.ui
+package com.rezapour.cazootask.view.carlist
 
 import android.os.Bundle
 import android.util.Log
@@ -14,9 +14,8 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.rezapour.cazootask.databinding.FragmentCarListBinding
 import com.rezapour.cazootask.model.VehicleListDetatil
-import com.rezapour.cazootask.ui.adapter.VehicleLIstAdapter
+import com.rezapour.cazootask.view.adapter.VehicleLIstAdapter
 import com.rezapour.cazootask.util.DataState
-import com.rezapour.cazootask.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.google.android.material.snackbar.Snackbar
@@ -27,7 +26,7 @@ import com.rezapour.cazootask.assets.Messages
 @AndroidEntryPoint
 class CarListFragment : Fragment() {
 
-    private val viewModel: MainViewModel by viewModels()
+    private val viewModel: VehicleListViewModel by viewModels()
     private var _binding: FragmentCarListBinding? = null
     private val binding get() = _binding!!
     private lateinit var recyclerView: RecyclerView

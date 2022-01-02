@@ -1,4 +1,4 @@
-package com.rezapour.cazootask.ui.adapter
+package com.rezapour.cazootask.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

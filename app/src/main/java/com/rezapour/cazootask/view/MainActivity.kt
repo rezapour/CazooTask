@@ -1,8 +1,7 @@
-package com.rezapour.cazootask.ui
+package com.rezapour.cazootask.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.rezapour.cazootask.R
 import com.rezapour.cazootask.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 

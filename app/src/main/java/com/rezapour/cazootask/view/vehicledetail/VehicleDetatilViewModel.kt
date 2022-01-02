@@ -1,4 +1,4 @@
-package com.rezapour.cazootask.viewmodel
+package com.rezapour.cazootask.view.vehicledetail
 
 import androidx.lifecycle.*
 import com.rezapour.cazootask.data.network.model.vehicles.VehicleNetworkEntity
@@ -8,7 +8,6 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
-import okhttp3.Dispatcher
 import javax.inject.Inject
 
 @HiltViewModel

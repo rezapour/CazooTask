@@ -1,4 +1,4 @@
-package com.rezapour.cazootask.ui
+package com.rezapour.cazootask.view
 
 import android.os.Bundle
 import android.os.Handler
