@@ -12,13 +12,12 @@ import javax.inject.Inject
 
 @HiltViewModel
 class VehicleListViewModel @Inject constructor(
-    private val savedStateHandle: SavedStateHandle,
     private val mainRepository: MainRepository
 ) : ViewModel() {
 
     private val _dataStateListOfCars: MutableLiveData<DataState<List<VehicleListDetatil>>> =
         MutableLiveData()
-    val dataStatListOfCars: LiveData<DataState<List<VehicleListDetatil>>> get() = _dataStateListOfCars
+    val dataStatListOfVehicles: LiveData<DataState<List<VehicleListDetatil>>> get() = _dataStateListOfCars
     private var vehicleList = ArrayList<VehicleListDetatil>()
     private var page = 1
 
@@ -44,10 +43,10 @@ class VehicleListViewModel @Inject constructor(
                     vehicleList.addAll(dataState.data)
                     _dataStateListOfCars.postValue(DataState.Success(vehicleList))
                 } else {
-                    if (page > 1) {
+                    if (page > 1)
                         page--
-                        _dataStateListOfCars.postValue(dataState)
-                    }
+                    _dataStateListOfCars.postValue(dataState)
+
                 }
             }
         }

@@ -169,11 +169,16 @@ class VehicleDetailFragment : Fragment(), View.OnClickListener {
         "${vehicle.mileage} ${vehicle.odometerReading.unit} ".also { txtMileAge.text = it }
         "${vehicle.registrationYear} reg".also { txtRegyear.text = it }
 
-        vehicle.pricing.pcmPrice?.pcp?.value.toString().let {
-            "${Currency.getInstance(vehicle.pricing.pcmPrice?.pcp?.currencyCode).symbol}$it/month PCP".also {
-                txtPcp.text = it
+
+        if (vehicle.pricing.pcmPrice != null)
+            vehicle.pricing.pcmPrice?.let {
+                it.pcp?.let {
+                    "${Currency.getInstance(vehicle.pricing.pcmPrice?.pcp?.currencyCode).symbol}${it.value} /month PCP".also {
+                        txtPcp.text = it
+                    }
+                }
+
             }
-        }
         " ${Currency.getInstance(vehicle.pricing.fullPrice.currencyCode).symbol}${vehicle.pricing.fullPrice.value.toString()}".also {
             txtPrice.text = it
         }
@@ -227,8 +232,11 @@ class VehicleDetailFragment : Fragment(), View.OnClickListener {
     }
 
     private fun addRunningCost(runningCosts: RunningCostsNetWorkEntity) {
-        val insurance =
+        val insurance = if (runningCosts.insuranceCostPerYear != null) {
             "Group ${runningCosts.insuranceGroup} [approx. ${Currency.getInstance(runningCosts.insuranceCostPerYear.currencyCode).symbol}${runningCosts.insuranceCostPerYear.value}/year]"
+        } else {
+            "Not available"
+        }
         addDataLayout("Insurance", insurance, layoutRunningCost)
 
         val fuelConsumption =

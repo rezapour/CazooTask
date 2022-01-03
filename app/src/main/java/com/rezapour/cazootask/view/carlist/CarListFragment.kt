@@ -85,7 +85,7 @@ class CarListFragment : Fragment() {
     }
 
     private fun subscribeToViewModel() {
-        viewModel.dataStatListOfCars.observe(viewLifecycleOwner) { dataState ->
+        viewModel.dataStatListOfVehicles.observe(viewLifecycleOwner) { dataState ->
             when (dataState) {
                 is DataState.Success -> successRespond(dataState.data)
                 is DataState.Error -> errorRespond(dataState.message)

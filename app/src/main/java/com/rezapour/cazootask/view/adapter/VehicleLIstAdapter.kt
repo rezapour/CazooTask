@@ -39,9 +39,10 @@ class VehicleLIstAdapter(
             vehicle.pcp.toString().let {
                 if (it == "0")
                     "Not available".also { txtPcp.text = it }
-                "${Currency.getInstance(vehicle.currencyCode).symbol}$it/month PCP".also {
-                    txtPcp.text = it
-                }
+                else
+                    "${Currency.getInstance(vehicle.currencyCode).symbol}$it/month PCP".also {
+                        txtPcp.text = it
+                    }
             }
             " ${Currency.getInstance(vehicle.currencyCode).symbol}${vehicle.price.toString()}".also {
                 txtPrice.text = it
