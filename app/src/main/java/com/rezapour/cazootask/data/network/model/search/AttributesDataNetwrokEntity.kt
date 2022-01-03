@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 import com.google.gson.annotations.Expose
 
 
-data class AttributesX(
+data class AttributesDataNetwrokEntity(
      @Expose @SerializedName("value") val value: Double,
      @Expose @SerializedName("displayValue") val displayValue: String,
      @Expose @SerializedName("unit") val unit: String,
