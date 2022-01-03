@@ -19,13 +19,13 @@ import java.io.File
 import java.io.InputStream
 import java.net.HttpURLConnection
 
-class MainRepositoryImplTest {
+class VehicleDataRepositoryImplTest {
 
     @get:Rule
     var mainCoroutineRule = MainCoroutineRule()
 
     lateinit var mockWebServer: MockWebServer
-    lateinit var repository: MainRepositoryImpl
+    lateinit var repository: VehicleDataRepositoryImpl
     lateinit var respondBody: String
     lateinit var respondBodyVehicleDetile: String
 
@@ -34,7 +34,7 @@ class MainRepositoryImplTest {
         mockWebServer = MockWebServer()
         val apiProviderFake =
             ApiProviderImplFack(RetrofitBuilderMock.provideApiService(mockWebServer))
-        repository = MainRepositoryImpl(apiProviderFake, NetworkMapper())
+        repository = VehicleDataRepositoryImpl(apiProviderFake, NetworkMapper())
 
 
         val inputStream: InputStream =

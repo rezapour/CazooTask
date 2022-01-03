@@ -1,8 +1,8 @@
-package com.rezapour.cazootask.view.vehicledetail
+package com.rezapour.cazootask.view.vehicledetail.viewmodel
 
 import androidx.lifecycle.*
 import com.rezapour.cazootask.data.network.model.vehicles.VehicleNetworkEntity
-import com.rezapour.cazootask.data.repository.MainRepository
+import com.rezapour.cazootask.data.repository.VehicleDataRepository
 import com.rezapour.cazootask.util.DataState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -12,13 +12,11 @@ import javax.inject.Inject
 
 @HiltViewModel
 class VehicleDetatilViewModel @Inject constructor(
-    private val savedStateHandle: SavedStateHandle,
-    private val repository: MainRepository
+    private val repository: VehicleDataRepository
 ) : ViewModel() {
 
     private val _dataState: MutableLiveData<DataState<VehicleNetworkEntity>> = MutableLiveData()
     val dataState: LiveData<DataState<VehicleNetworkEntity>> get() = _dataState
-
 
     fun getVehicleDetail(id: String) {
         _dataState.value = DataState.Loading

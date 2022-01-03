@@ -11,11 +11,11 @@ import kotlinx.coroutines.flow.flow
 import java.lang.Exception
 import javax.inject.Inject
 
-class MainRepositoryImpl @Inject constructor(
+class VehicleDataRepositoryImpl @Inject constructor(
     private val apiProvider: ApiProvider,
     private val netWorkMapper: NetworkMapper
 ) :
-    MainRepository {
+    VehicleDataRepository {
     override suspend fun getCarList(page: Int): Flow<DataState<List<VehicleListDetatil>>> = flow {
         try {
             val response = apiProvider.getCarList(page)

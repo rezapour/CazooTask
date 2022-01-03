@@ -1,4 +1,4 @@
-package com.rezapour.cazootask.view.vehicledetail
+package com.rezapour.cazootask.view.vehicledetail.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

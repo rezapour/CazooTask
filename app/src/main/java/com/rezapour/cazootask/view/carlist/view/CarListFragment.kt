@@ -1,4 +1,4 @@
-package com.rezapour.cazootask.view.carlist
+package com.rezapour.cazootask.view.carlist.view
 
 import android.os.Bundle
 import android.util.Log
@@ -14,13 +14,14 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.rezapour.cazootask.databinding.FragmentCarListBinding
 import com.rezapour.cazootask.model.VehicleListDetatil
-import com.rezapour.cazootask.view.adapter.VehicleLIstAdapter
+import com.rezapour.cazootask.view.carlist.adapter.VehicleLIstAdapter
 import com.rezapour.cazootask.util.DataState
 import dagger.hilt.android.AndroidEntryPoint
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.google.android.material.snackbar.Snackbar
 import com.rezapour.cazootask.R
 import com.rezapour.cazootask.assets.Messages
+import com.rezapour.cazootask.view.carlist.viewmodel.VehicleListViewModel
 
 
 @AndroidEntryPoint
@@ -46,10 +47,10 @@ class CarListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
-        setUp()
+        setupFragment()
     }
 
-    private fun setUp() {
+    private fun setupFragment() {
         initUI()
         subscribeToViewModel()
         viewModel.getCarsData()

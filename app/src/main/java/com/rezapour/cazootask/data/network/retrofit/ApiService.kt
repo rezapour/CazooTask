@@ -10,10 +10,10 @@ import retrofit2.http.Query
 
 interface ApiService {
 
-    @GET(Constants.SUB_DOMAIN_SEARCH)
+    @GET("api/search")
     suspend fun getCarList(@Query("page") page: Int): Response<CarListNetworkEntity>
 
-    @GET(Constants.SUB_DOMAIN_VEHICLE)
+    @GET("api/vehicles/{id}")
     suspend fun getVehicleDetail(@Path("id") id: String): Response<VehicleNetworkEntity>
 
 

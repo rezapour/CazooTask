@@ -1,7 +1,7 @@
-package com.rezapour.cazootask.view.carlist
+package com.rezapour.cazootask.view.carlist.viewmodel
 
 import androidx.lifecycle.*
-import com.rezapour.cazootask.data.repository.MainRepository
+import com.rezapour.cazootask.data.repository.VehicleDataRepository
 import com.rezapour.cazootask.model.VehicleListDetatil
 import com.rezapour.cazootask.util.DataState
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -12,7 +12,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class VehicleListViewModel @Inject constructor(
-    private val mainRepository: MainRepository
+    private val vehicleDataRepository: VehicleDataRepository
 ) : ViewModel() {
 
     private val _dataStateListOfCars: MutableLiveData<DataState<List<VehicleListDetatil>>> =
@@ -35,7 +35,7 @@ class VehicleListViewModel @Inject constructor(
     private fun loadData() {
         _dataStateListOfCars.value = DataState.Loading
         viewModelScope.launch(Dispatchers.IO) {
-            mainRepository.getCarList(page).collect { dataState ->
+            vehicleDataRepository.getCarList(page).collect { dataState ->
                 if (dataState is DataState.Success) {
                     if (page == 1) {
                         vehicleList.clear()

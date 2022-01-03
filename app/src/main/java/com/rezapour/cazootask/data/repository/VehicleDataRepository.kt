@@ -5,7 +5,7 @@ import com.rezapour.cazootask.model.VehicleListDetatil
 import com.rezapour.cazootask.util.DataState
 import kotlinx.coroutines.flow.Flow
 
-interface MainRepository {
+interface VehicleDataRepository {
     suspend fun getCarList(page: Int): Flow<DataState<List<VehicleListDetatil>>>
 
     suspend fun getVehicleDetail(id: String): Flow<DataState<VehicleNetworkEntity>>

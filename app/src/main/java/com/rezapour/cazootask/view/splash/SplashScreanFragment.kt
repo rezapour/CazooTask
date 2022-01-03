@@ -1,4 +1,4 @@
-package com.rezapour.cazootask.view
+package com.rezapour.cazootask.view.splash
 
 import android.os.Bundle
 import android.os.Handler

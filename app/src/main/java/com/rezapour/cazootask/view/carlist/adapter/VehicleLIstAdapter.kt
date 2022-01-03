@@ -1,4 +1,4 @@
-package com.rezapour.cazootask.view.adapter
+package com.rezapour.cazootask.view.carlist.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -59,15 +59,13 @@ class VehicleLIstAdapter(
     }
 
     override fun onBindViewHolder(holder: VehicleViewHolder, position: Int) {
-        val vehicle = vehicleList.get(position)
-        holder.bindItem(vehicle)
+        holder.bindItem(vehicleList[position])
         if (position == vehicleList.size - 1)
             onButtomRiched()
     }
 
-    override fun getItemCount(): Int {
-        return vehicleList.size
-    }
+    override fun getItemCount(): Int = vehicleList.size
+
 
     fun addItem(items: List<VehicleListDetatil>) {
         vehicleList.clear()

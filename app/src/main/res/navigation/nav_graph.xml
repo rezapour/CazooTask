@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/carListFragment"
-        android:name="com.rezapour.cazootask.view.carlist.CarListFragment"
+        android:name="com.rezapour.cazootask.view.carlist.view.CarListFragment"
         android:label="fragment_car_list"
         tools:layout="@layout/fragment_car_list">
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/vehicleDetailFragment"
-        android:name="com.rezapour.cazootask.view.vehicledetail.VehicleDetailFragment"
+        android:name="com.rezapour.cazootask.view.vehicledetail.view.VehicleDetailFragment"
         android:label="fragment_vehicle_detail"
         tools:layout="@layout/fragment_vehicle_detail">
         <argument
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/splashScreanFragment"
-        android:name="com.rezapour.cazootask.view.SplashScreanFragment"
+        android:name="com.rezapour.cazootask.view.splash.SplashScreanFragment"
         android:label="fragment_splash_screan"
         tools:layout="@layout/fragment_splash_screan">
         <action
@@ -39,7 +39,7 @@
     </fragment>
     <fragment
         android:id="@+id/galleryFragment"
-        android:name="com.rezapour.cazootask.view.vehicledetail.GalleryFragment"
+        android:name="com.rezapour.cazootask.view.vehicledetail.view.GalleryFragment"
         android:label="fragment_gallery"
         tools:layout="@layout/fragment_gallery">
         <argument

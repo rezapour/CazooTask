@@ -1,4 +1,4 @@
-package com.rezapour.cazootask.view.vehicledetail
+package com.rezapour.cazootask.view.vehicledetail.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -26,6 +26,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.rezapour.cazootask.R
 import com.rezapour.cazootask.assets.Messages
 import com.rezapour.cazootask.data.network.model.vehicles.*
+import com.rezapour.cazootask.view.vehicledetail.viewmodel.VehicleDetatilViewModel
 
 
 @AndroidEntryPoint
