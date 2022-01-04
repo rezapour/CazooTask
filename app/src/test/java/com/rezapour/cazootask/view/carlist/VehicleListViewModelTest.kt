@@ -36,14 +36,15 @@ class VehicleListViewModelTest {
     fun `getCarsPagination success network respond`() {
         repository.setNetworkRespondError(true)
         viewModel.getCarsData()
-
+        val valueloading = viewModel.dataStatListOfVehicles.getOrAwaitValueTest()
+        assertThat(valueloading).isInstanceOf(DataState.Loading::class.java)
         val valueRespond = viewModel.dataStatListOfVehicles.getOrAwaitValueTest()
         assertThat(valueRespond).isInstanceOf(DataState.Success::class.java)
 
     }
 
     @Test
-    fun `getCarsPagination success network error`() {
+    fun `getCarsPagination network error`() {
         repository.setNetworkRespondError(false)
         viewModel.getCarsData()
         val valueloading = viewModel.dataStatListOfVehicles.getOrAwaitValueTest()
